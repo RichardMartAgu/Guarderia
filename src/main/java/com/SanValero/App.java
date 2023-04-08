@@ -1,4 +1,4 @@
-package SanValero.Richard;
+package com.SanValero;
 
 /**
  * Hello world!
