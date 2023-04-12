@@ -4,15 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9db6668a-cb1e-4af4-a681-10639ac779ef" name="Changes" comment="Añadir Dao Alumno y necesarios">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/savalero/dao/GrupoDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/savalero/domain/Grupo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/form.jsp" afterDir="false" />
+    <list default="true" id="9db6668a-cb1e-4af4-a681-10639ac779ef" name="Changes" comment="Ultimos ajustes Alumno y necesarios">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/savalero/dao/TutorLegalDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/savalero/dao/TutorLegalMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/savalero/domain/TutorLegal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/addTutorLegal.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/savalero/dao/AlumnoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/savalero/dao/AlumnoMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/savalero/domain/Alumno.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/savalero/domain/Alumno.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Includes/footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Includes/footer.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Includes/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Includes/header.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -30,6 +27,19 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="cb43c0c1-48d1-4029-b9da-8e7df9abfa0e" />
+        <option name="url" value="https://github.com/RichardMartAgu/Guarderia.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -55,19 +65,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/richa/OneDrive/Escritorio/Trabajos a lo loco/TallerWebApp",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "MavenSettings"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/richa/OneDrive/Escritorio/Trabajos a lo loco/TallerWebApp&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\richa\IdeaProjects\Guarderia\src\main\webapp" />
@@ -113,14 +123,22 @@
       <option name="project" value="LOCAL" />
       <updated>1681143003167</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Ultimos ajustes Alumno y necesarios">
+      <created>1681317099064</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1681317099064</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Inicializando Entorno" />
     <MESSAGE value="Primera config HTML" />
     <MESSAGE value="Añadir Dao Alumno y necesarios" />
-    <option name="LAST_COMMIT_MESSAGE" value="Añadir Dao Alumno y necesarios" />
+    <MESSAGE value="Ultimos ajustes Alumno y necesarios" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ultimos ajustes Alumno y necesarios" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -12,6 +12,9 @@
 
 
 <main>
+        <div class="d-flex justify-content-center align-items-center" >
+           <a href="addTutorLegal.jsp" class="btn btn-info my-2">Registrar un Tutor Legal</a>
+        </div>
         <div class="row bg-body-tertiary ">
      <%
                 Class.forName("com.mysql.cj.jdbc.Driver");
