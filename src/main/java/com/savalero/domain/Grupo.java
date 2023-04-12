@@ -9,16 +9,13 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class Alumno {
+public class Grupo {
 
-    private int id_alumno;
-    @NonNull
-    private String nombre_alumno;
-    @NonNull
-    private LocalDate fecha_nacimiento;
-    @NonNull
     private String letra_grupo;
     @NonNull
-    private String dni_tutor_legal;
+    private String nombre_grupo;
+    @NonNull
+    private String dni_profesor;
+
 
 }

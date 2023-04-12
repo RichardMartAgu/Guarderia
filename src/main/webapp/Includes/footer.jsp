@@ -22,8 +22,8 @@
         </ul>
       </div>
     </div>
-    <div class="container text-sm-start">
-        <span class="text-body-secondary"> <p class="text-primary">hola</p></span>
-        <small class="d-block mb-3 text-body-secondary"><p class="text-primary">© 2017–2023</p></small>
+    <div class="container text-sm-end">
+    <br>
+        <small class="d-block mb-3 text-body-secondary"><p class="text-primary">(c) 2023 GuarderiaWebApp 1.0</p></small>
       </div>
   </footer>

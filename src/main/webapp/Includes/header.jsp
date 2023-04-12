@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="es"data-bs-theme="dark">
 <head>
@@ -23,16 +23,30 @@
      <div class="collapse navbar-collapse" id="navbarNavDropdown">
        <ul class="navbar-nav">
          <li class="nav-item">
-           <a class="nav-link active" aria-current="page" href="#">Información</a>
+           <a class="nav-link" aria-current="page" href="#">Grupos</a>
          </li>
          <li class="nav-item">
            <a class="nav-link" href="#">Alumnos</a>
          </li>
          <li class="nav-item">
-           <a class="nav-link" href="#">Profesores</a>
+           <a class="nav-link" href="#">Tutores legales</a>
          </li>
+           <li class="nav-item">
+             <a class="nav-link" href="#">Profesores</a>
+          </li>
        </ul>
      </div>
    </div>
  </nav>
+<div class="position-relative  text-center ">
+    <div class="col-md-5 p-lg-5 mx-auto my-1">
+        <h1 class="display-4 fw-normal text-decoration-underline">Gestión Guardería Alegría</h1>
+        <img src="https://cronicaglobal.elespanol.com/uploads/s1/17/31/12/45/guarderia-virus_11_1000x528.jpeg" class="img-fluid rounded mx-auto d-block"alt="Interior Guardería" />
+        <br>
+        <a class="btn btn-outline-secondary" href="#">Registrarse</a>
+    </div>
+    <div class="product-device shadow-sm d-none d-md-block"></div>
+    <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+</div>
+
 </header>
