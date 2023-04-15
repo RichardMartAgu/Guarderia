@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9db6668a-cb1e-4af4-a681-10639ac779ef" name="Changes" comment="Ultimos ajustes Alumno y necesarios">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/savalero/dao/TutorLegalDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/savalero/dao/TutorLegalMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/savalero/domain/TutorLegal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/addTutorLegal.jsp" afterDir="false" />
+    <list default="true" id="9db6668a-cb1e-4af4-a681-10639ac779ef" name="Changes" comment="Añadir Clase TutorLegal y necesarios">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/grupo.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Includes/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Includes/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/addTutorLegal.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/add-tutor-legal.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,11 +28,11 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -130,7 +130,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681317099064</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Añadir Clase TutorLegal y necesarios">
+      <created>1681320891307</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1681320891307</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -138,7 +145,8 @@
     <MESSAGE value="Primera config HTML" />
     <MESSAGE value="Añadir Dao Alumno y necesarios" />
     <MESSAGE value="Ultimos ajustes Alumno y necesarios" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ultimos ajustes Alumno y necesarios" />
+    <MESSAGE value="Añadir Clase TutorLegal y necesarios" />
+    <option name="LAST_COMMIT_MESSAGE" value="Añadir Clase TutorLegal y necesarios" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

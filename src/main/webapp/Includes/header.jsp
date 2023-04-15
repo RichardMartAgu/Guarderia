@@ -14,36 +14,13 @@ pageEncoding="UTF-8"%>
 
 
 <header >
- <nav class="navbar navbar-expand-lg bg-body-tertiary">
-   <div class="container-fluid ">
-     <a class="navbar-brand" href="#"></a>
-     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-       <span class="navbar-toggler-icon"></span>
-     </button>
-     <div class="collapse navbar-collapse" id="navbarNavDropdown">
-       <ul class="navbar-nav">
-         <li class="nav-item">
-           <a class="nav-link" aria-current="page" href="#">Grupos</a>
-         </li>
-         <li class="nav-item">
-           <a class="nav-link" href="#">Alumnos</a>
-         </li>
-         <li class="nav-item">
-           <a class="nav-link" href="#">Tutores legales</a>
-         </li>
-           <li class="nav-item">
-             <a class="nav-link" href="#">Profesores</a>
-          </li>
-       </ul>
-     </div>
-   </div>
- </nav>
+
 <div class="position-relative  text-center ">
     <div class="col-md-5 p-lg-5 mx-auto my-1">
         <h1 class="display-4 fw-normal text-decoration-underline">Gestión Guardería Alegría</h1>
-        <img src="https://cronicaglobal.elespanol.com/uploads/s1/17/31/12/45/guarderia-virus_11_1000x528.jpeg" class="img-fluid rounded mx-auto d-block"alt="Interior Guardería" />
-        <br>
-        <a class="btn btn-outline-secondary" href="#">Registrarse</a>
+        <br/>
+        <img src="https://img.freepik.com/vector-premium/guarderia-bebes-educador-grupo-mas-joven-ninos-ninera-ninos-pequenos-juegos-actividades-ninos-guarderia-lindos-bebes-felices-juegan-piramides-pelotas-concepto-sala-juegos-dibujos-animados-vector_533410-219.jpg?w=900" class="img-fluid rounded mx-auto d-block"alt="Interior Guardería" />
+
     </div>
     <div class="product-device shadow-sm d-none d-md-block"></div>
     <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
