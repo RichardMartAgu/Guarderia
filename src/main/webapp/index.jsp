@@ -5,27 +5,21 @@
 
 <%-- Barra navegación --%>
 
- <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
-   <div class="container-fluid ">
-
-     <div class="collapse navbar-collapse" id="navbarNavDropdown">
-       <ul class="navbar-nav">
-         <li class="nav-item">
-           <a class="nav-link" aria-current="page" href="#seccion1">Grupos</a>
-         </li>
-         <li class="nav-item">
-           <a class="nav-link" href="#seccion2">Profesores</a>
-         </li>
-         <li class="nav-item">
-           <a class="nav-link" href="#seccion3">Tutores legales</a>
-         </li>
-           <li class="nav-item">
-             <a class="nav-link" href="#seccion4">Alumnos</a>
-          </li>
-       </ul>
-     </div>
-   </div>
- </nav>
+<nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top"">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link" href="#seccion1">Grupos</a>
+        <a class="nav-link" href="#seccion2">Profesores</a>
+        <a class="nav-link" href="#seccion3">Tutores legales</a>
+        <a class="nav-link" href="#seccion4">Alumnos</a>
+      </div>
+    </div>
+  </div>
+</nav>
 
  <%-- Sección 1 --%>
 
