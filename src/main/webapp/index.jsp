@@ -55,7 +55,7 @@
       <div class="my-3 py-3">
         <h2 class="display-5">Tutor Legal</h2>
         <br/>
-        <a href="./add-tutor-legal.jsp" class="btn btn-outline-info" role="button" >Listar Tutores Legales</a>
+        <a href="./listar-tutor-legal.jsp" class="btn btn-outline-info" role="button" >Listar Tutores Legales</a>
         <a href="./add-tutor-legal.jsp" class="btn btn-outline-success" role="button" >Administrar Tutores Legales</a>
       </div>
       <div class="bg-body shadow-sm mx-auto" style="width: 700px; border-radius: 21px 21px 0 0;">

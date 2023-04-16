@@ -24,7 +24,7 @@
     Database.connect();
     String dniProfesor = request.getParameter("Dni_profesor");
     Profesor profesor = Database.jdbi.withExtension(ProfesorDAO.class, dao -> dao.getProfesor(dniProfesor.trim()));
-    System.out.println(dniProfesor);
+
 %>
 
 <div class="container container-sm ">
