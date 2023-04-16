@@ -1,4 +1,4 @@
-package com.savalero.domain;
+package com.sanvalero.domain;
 
 import lombok.*;
 

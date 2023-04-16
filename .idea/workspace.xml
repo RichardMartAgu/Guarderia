@@ -4,13 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9db6668a-cb1e-4af4-a681-10639ac779ef" name="Changes" comment="Ajustar aspecto de HTML index.jsp">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/savalero/servlet/AddTutorLegalServlet.java" afterDir="false" />
+    <list default="true" id="9db6668a-cb1e-4af4-a681-10639ac779ef" name="Changes" comment="Completar formulario.jsp">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/view-details-profesor.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Includes/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Includes/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/savalero/dao/AlumnoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/dao/AlumnoDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/savalero/dao/AlumnoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/dao/AlumnoMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/savalero/dao/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/dao/Database.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/savalero/dao/GrupoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/dao/GrupoDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/savalero/dao/GrupoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/dao/GrupoMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/savalero/dao/TutorLegalDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/dao/TutorLegalDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/savalero/dao/TutorLegalMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/dao/TutorLegalMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/savalero/domain/Alumno.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/domain/Alumno.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/savalero/domain/Grupo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/domain/Grupo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/savalero/domain/TutorLegal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/domain/TutorLegal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/savalero/servlet/AddTutorLegalServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/AddTutorLegalServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/savalero/util/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/util/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/savalero/util/DateUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/util/DateUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/add-tutor-legal.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/add-tutor-legal.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/grupo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/listar-grupo.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/view-details-grupo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view-details-grupo.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,19 +79,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/richa/OneDrive/Escritorio/Trabajos a lo loco/TallerWebApp&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/richa/OneDrive/Escritorio/Trabajos a lo loco/TallerWebApp",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.keymap"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\richa\IdeaProjects\Guarderia\src\main\webapp" />
@@ -137,7 +151,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681320891307</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Completar formulario.jsp">
+      <created>1681574066174</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1681574066174</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -146,7 +167,8 @@
     <MESSAGE value="Añadir Dao Alumno y necesarios" />
     <MESSAGE value="Ultimos ajustes Alumno y necesarios" />
     <MESSAGE value="Añadir Clase TutorLegal y necesarios" />
-    <option name="LAST_COMMIT_MESSAGE" value="Añadir Clase TutorLegal y necesarios" />
+    <MESSAGE value="Completar formulario.jsp" />
+    <option name="LAST_COMMIT_MESSAGE" value="Completar formulario.jsp" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

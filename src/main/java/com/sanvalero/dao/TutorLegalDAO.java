@@ -1,12 +1,11 @@
-package com.savalero.dao;
+package com.sanvalero.dao;
 
 
-import com.savalero.domain.TutorLegal;
+import com.sanvalero.domain.TutorLegal;
 import org.jdbi.v3.sqlobject.statement.SqlQuery;
 import org.jdbi.v3.sqlobject.statement.SqlUpdate;
 import org.jdbi.v3.sqlobject.statement.UseRowMapper;
 
-import java.sql.Date;
 import java.util.List;
 
 public interface TutorLegalDAO {

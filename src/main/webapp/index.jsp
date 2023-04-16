@@ -27,7 +27,8 @@
       <div  class="my-3 py-3">
         <h2 class="display-5">Grupos</h2>
         <br/>
-        <a href="#" class="btn btn-outline-info" role="button" data-bs-toggle="button">Administrar datos Grupo</a>
+        <a href="./listar-grupo.jsp" class="btn btn-outline-success" role="button" >Listar todos los grupos</a>
+        <a href="#" class="btn btn-outline-info" role="button" >Administrar datos Grupo</a>
       </div>
       <div class="bg-body shadow-sm mx-auto" style="width: 700px; border-radius: 21px 21px 0 0;">
          <img src="https://img.freepik.com/vector-gratis/fuente-abc-ninos-felices_1308-5923.jpg?w=2000" alt="Descripción de la imagen" class="img-fluid rounded mx-auto d-block">

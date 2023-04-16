@@ -1,7 +1,7 @@
-package com.savalero.dao;
+package com.sanvalero.dao;
 
-import com.savalero.domain.Alumno;
-import com.savalero.util.DateUtils;
+import com.sanvalero.domain.Alumno;
+import com.sanvalero.util.DateUtils;
 import org.jdbi.v3.core.mapper.RowMapper;
 import org.jdbi.v3.core.statement.StatementContext;
 

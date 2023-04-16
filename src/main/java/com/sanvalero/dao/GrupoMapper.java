@@ -1,6 +1,6 @@
-package com.savalero.dao;
+package com.sanvalero.dao;
 
-import com.savalero.domain.Grupo;
+import com.sanvalero.domain.Grupo;
 import org.jdbi.v3.core.mapper.RowMapper;
 import org.jdbi.v3.core.statement.StatementContext;
 

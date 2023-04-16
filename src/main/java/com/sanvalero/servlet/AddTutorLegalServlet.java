@@ -1,7 +1,7 @@
-package com.savalero.servlet;
+package com.sanvalero.servlet;
 
-import com.savalero.dao.Database;
-import com.savalero.dao.TutorLegalDAO;
+import com.sanvalero.dao.Database;
+import com.sanvalero.dao.TutorLegalDAO;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;

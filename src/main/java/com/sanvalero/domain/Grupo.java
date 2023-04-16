@@ -1,8 +1,6 @@
-package com.savalero.domain;
+package com.sanvalero.domain;
 
 import lombok.*;
-
-import java.time.LocalDate;
 
 @Data
 @RequiredArgsConstructor

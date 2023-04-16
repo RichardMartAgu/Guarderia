@@ -1,6 +1,6 @@
-package com.savalero.dao;
+package com.sanvalero.dao;
 
-import com.savalero.domain.TutorLegal;
+import com.sanvalero.domain.TutorLegal;
 import org.jdbi.v3.core.mapper.RowMapper;
 import org.jdbi.v3.core.statement.StatementContext;
 

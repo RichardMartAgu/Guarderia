@@ -1,7 +1,7 @@
-package com.savalero.dao;
+package com.sanvalero.dao;
 
 
-import com.savalero.domain.Alumno;
+import com.sanvalero.domain.Alumno;
 import org.jdbi.v3.sqlobject.statement.SqlQuery;
 import org.jdbi.v3.sqlobject.statement.SqlUpdate;
 import org.jdbi.v3.sqlobject.statement.UseRowMapper;
