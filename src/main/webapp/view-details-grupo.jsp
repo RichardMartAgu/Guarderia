@@ -8,15 +8,20 @@
 <%@include file="Includes/header.jsp"%>
 
 <main>
-
+<div class="d-flex justify-content-center">
+  <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="index.jsp">Inicio</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Grupos</li>
+    </ol>
+  </nav>
+</div>
 <%
 
     Class.forName("com.mysql.cj.jdbc.Driver");
     Database.connect();
     String letraGrupo = request.getParameter("Letra_grupo");
     Grupo grupo = Database.jdbi.withExtension(GrupoDAO.class, dao -> dao.getGrupo(letraGrupo.trim()));
-    Grupo grupo1= Database.jdbi.withExtension(GrupoDAO.class, dao -> dao.getGrupo("a"));
-
 
 %>
 
