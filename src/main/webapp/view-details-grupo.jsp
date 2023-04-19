@@ -12,7 +12,7 @@
   <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
     <ol class="breadcrumb">
       <li class="breadcrumb-item"><a href="index.jsp">Inicio</a></li>
-      <li class="breadcrumb-item active" aria-current="page">Grupos</li>
+      <li class="breadcrumb-item active" aria-current="page">Grupo</li>
     </ol>
   </nav>
 </div>

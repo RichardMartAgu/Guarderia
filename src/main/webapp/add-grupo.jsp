@@ -1,4 +1,11 @@
-
+<%@ page import="com.sanvalero.dao.Database" %>
+<%@ page import="com.sanvalero.domain.Profesor" %>
+<%@ page import="com.sanvalero.dao.ProfesorDAO" %>
+<%@ page import="com.sanvalero.domain.Grupo" %>
+<%@ page import="com.sanvalero.dao.GrupoDAO" %>
+<%@ page import="java.util.List" %>
+<%@ page import="java.util.Arrays" %>
+<%@ page import="java.util.ArrayList" %>
 
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@include file="Includes/header.jsp"%>
@@ -8,7 +15,7 @@
         $("form").on("submit", function(event) {
             event.preventDefault();
             var formValue = $(this).serialize();
-            $.post("add-tutor-legal", formValue, function(data) {
+            $.post("add-grupo", formValue, function(data) {
                 $("#result").html(data);
             });
         });
@@ -17,64 +24,84 @@
 
 <main>
 
+    <%
+         Class.forName("com.mysql.cj.jdbc.Driver");
+         Database.connect();
+         List<Grupo> grupoList = Database.jdbi.withExtension(GrupoDAO.class, GrupoDAO::getGrupos);
+         List<Profesor> profesorList = Database.jdbi.withExtension(ProfesorDAO.class, ProfesorDAO::getProfesorSinGrupo);
+
+     %>
+
 <div class="d-flex justify-content-center">
   <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
     <ol class="breadcrumb">
       <li class="breadcrumb-item"><a href="index.jsp">Inicio</a></li>
-      <li class="breadcrumb-item active" aria-current="page">Listar Alumnos</li>
+      <li class="breadcrumb-item active" aria-current="page">Añadir Grupo</li>
     </ol>
   </nav>
 </div>
 
 
-<%-- Formulario para añadir Tutor Legal --%>
+<%-- Formulario para añadir Grupo --%>
 
 <div class="container px-5">
-    <h3 class="display-4 fw-normal text-center">Añadir tutor legal</h3>
+    <h3 class="display-4 fw-normal text-center">Añadir Grupo</h3>
     <br/> <br/>
     <form class="row g-3 needs-validation">
      <div class="col-md-6">
-            <label for="nombre" class="form-label">Nombre</label>
-            <input type="text" class="form-control" id="nombre" name="nombre_tutor_legal" required>
+            <label for="nombre" class="form-label">Letra</label>
+            <select class="form-control" id="letra_grupo" name="letra_grupo" required>
 
-     </div>
-     <div class="invalid-feedback">
-                       Por favor ingrese el nombre del tutor legal.
-                 </div>
+                <%
+
+                List<String> todasLasLetras = Arrays.asList("A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "Ñ", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z");
+                List<String> letrasDisponibles = new ArrayList<>(todasLasLetras);
+                for (Grupo grupo : grupoList) {
+                letrasDisponibles.remove(grupo.getLetra_grupo() );
+                }
+                letrasDisponibles.removeAll(grupoList);
+                for (String letra : letrasDisponibles) { %>
+
+                <option value="<%= letra %>"><%= letra %></option>
+
+                  <% } %>
+
+             </select>
+
+            <div class="invalid-feedback">
+                  Por favor ingrese el nombre del profesor.
+            </div>
+    </div>
+
      <div class="col-md-6">
-            <label for="inputPassword4" class="form-label">DNI</label>
-            <input type="text" class="form-control" id="dni"name="dni_tutor_legal"required>
+            <label for="inputPassword4" class="form-label">Nombre Grupo</label>
+            <input type="text" class="form-control" id="nombre_grupo"name="nombre_grupo"required>
             <div class="invalid-feedback">
                        Por favor ingrese Dni.
            </div>
-     </div>
+    </div>
 
       <div class="col-md-6">
-        <label for="inputEmail4" class="form-label">Email</label>
-        <input type="email" class="form-control" id="email"name="email" required>
-        <div class="invalid-feedback">
-                          Por favor ingrese el email.
-        </div>
-      </div>
-      <div class="col-md-6">
-        <label for="inputPassword4" class="form-label">Telefono</label>
-        <input type="tel" class="form-control" id="telefono"name="telefono"required>
-        <div class="invalid-feedback">
-                                  Por favor ingrese el telefono.
-                </div>
-      </div>
-      <div class="col-12">
-        <label for="inputAddress" class="form-label">Direccion</label>
-        <input type="text" class="form-control" id="direccion" name="direccion" placeholder="Calle..."required>
-        <div class="invalid-feedback">
-              Por favor ingrese la dirección.
+                 <label for="dni" class="form-label">Dni Profesor al cargo Legal</label>
+                 <select class="form-select" id="dni_profesor" name="dni_profesor" required>
+
+
+                     <% for (Profesor profesor : profesorList)  { %>
+                     <option value="<%= profesor.getDni_profesor() %>"><%= profesor.getDni_profesor() %></option>
+                     <% } %>
+
+                 </select>
          </div>
-      </div>
+                 <div class="invalid-feedback">
+                     Por favor seleccione un DNI de profesor al cargo.
+                 </div>
 
 
-       <div class="col-12 text-center">
+
+            <div class="col-12 text-center">
                  <button type="submit" class="btn btn-primary" disabled>Registrar</button>
-             </div>
+            </div>
+
 
              <script>
                  $(document).ready(function() {

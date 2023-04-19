@@ -1,5 +1,3 @@
-
-
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@include file="Includes/header.jsp"%>
 
@@ -8,7 +6,7 @@
         $("form").on("submit", function(event) {
             event.preventDefault();
             var formValue = $(this).serialize();
-            $.post("add-tutor-legal", formValue, function(data) {
+            $.post("add-profesor", formValue, function(data) {
                 $("#result").html(data);
             });
         });
@@ -27,23 +25,23 @@
 </div>
 
 
-<%-- Formulario para añadir Tutor Legal --%>
+<%-- Formulario para añadir Profesor --%>
 
 <div class="container px-5">
-    <h3 class="display-4 fw-normal text-center">Añadir tutor legal</h3>
+    <h3 class="display-4 fw-normal text-center">Añadir Profesor</h3>
     <br/> <br/>
     <form class="row g-3 needs-validation">
      <div class="col-md-6">
             <label for="nombre" class="form-label">Nombre</label>
-            <input type="text" class="form-control" id="nombre" name="nombre_tutor_legal" required>
+            <input type="text" class="form-control" id="nombre_profesor" name="nombre_profesor" required>
+            <div class="invalid-feedback">
+                  Por favor ingrese el nombre del profesor.
+            </div>
+        </div>
 
-     </div>
-     <div class="invalid-feedback">
-                       Por favor ingrese el nombre del tutor legal.
-                 </div>
      <div class="col-md-6">
             <label for="inputPassword4" class="form-label">DNI</label>
-            <input type="text" class="form-control" id="dni"name="dni_tutor_legal"required>
+            <input type="text" class="form-control" id="dni_profesor"name="dni_profesor"required>
             <div class="invalid-feedback">
                        Por favor ingrese Dni.
            </div>
@@ -60,8 +58,8 @@
         <label for="inputPassword4" class="form-label">Telefono</label>
         <input type="tel" class="form-control" id="telefono"name="telefono"required>
         <div class="invalid-feedback">
-                                  Por favor ingrese el telefono.
-                </div>
+                                  Por favor ingrese el teléfono.
+        </div>
       </div>
       <div class="col-12">
         <label for="inputAddress" class="form-label">Direccion</label>
