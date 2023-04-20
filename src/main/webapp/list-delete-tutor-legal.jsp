@@ -7,7 +7,6 @@
 <%@include file="Includes/header.jsp"%>
 
 
-
 <div class="d-flex justify-content-center">
   <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
     <ol class="breadcrumb">
@@ -30,9 +29,9 @@
             <%
                 Class.forName("com.mysql.cj.jdbc.Driver");
                 Database.connect();
-                List<TutorLegal> tutorLegalListBorradoNO = Database.jdbi.withExtension(TutorLegalDAO.class, TutorLegalDAO::getTutoresLegalesConAlumnos);
-                List<TutorLegal> tutorLegalListBorradoSI = Database.jdbi.withExtension(TutorLegalDAO.class, TutorLegalDAO::getTutoresLegalesSinAlumnos);
-                for (TutorLegal tutorLegal : tutorLegalListBorradoNO) {
+                List<TutorLegal> tutorLegalListBorradoNo = Database.jdbi.withExtension(TutorLegalDAO.class, TutorLegalDAO::getTutoresLegalesConAlumnos);
+                List<TutorLegal> tutorLegalListBorradoSi = Database.jdbi.withExtension(TutorLegalDAO.class, TutorLegalDAO::getTutoresLegalesSinAlumnos);
+                for (TutorLegal tutorLegal : tutorLegalListBorradoNo) {
             %>
 
        <div class="col-sm-4 text-center" >
@@ -42,7 +41,7 @@
          <h2 class="fw-normal"><%= tutorLegal.getDni_tutor_legal() %></h2>
          <br>
          <p><a class="btn btn-outline-info" href="./view-detail-tutor-legal.jsp?Dni_tutor_legal=<%= tutorLegal.getDni_tutor_legal() %>">Más datos del tutor legal</a></p>
-         <a class="btn btn-outline-danger" href="./remove-tutor-legal?Dni_tutor_legal=<%= tutorLegal.getDni_tutor_legal() %>">Borrado definitivo del niño al cargo</a></p>
+         <a class="btn btn-outline-danger" href="./remove-alumno?Dni_tutor_legal=<%= tutorLegal.getDni_tutor_legal() %>">Borrado definitivo del niño al cargo</a></p>
        </div>
 
         <%
@@ -54,7 +53,7 @@
                    <h1 class="fw-normal text-center text-success ">Se pueden borrar</h1>
                </div>
         <%
-            for (TutorLegal tutorLegal : tutorLegalListBorradoSI) {
+            for (TutorLegal tutorLegal : tutorLegalListBorradoSi) {
         %>
 
                    <div class="col-sm-4 text-center" >
@@ -64,17 +63,37 @@
                      <h2 class="fw-normal"><%= tutorLegal.getDni_tutor_legal() %></h2>
                      <br>
                      <p><a class="btn btn-outline-info" href="./view-detail-tutor-legal.jsp?Dni_tutor_legal=<%= tutorLegal.getDni_tutor_legal() %>">Más datos del tutor legal</a></p>
-                      <a class="btn btn-outline-danger" href="./remove-tutor-legal?Dni_tutor_legal=<%= tutorLegal.getDni_tutor_legal() %>">Borrado definitivo Tutor Legal</a></p>
+                     <form id="formulario" action="./remove-tutor-legal" >
+                              <input type="hidden" name="Dni_tutor_legal" value="<%= tutorLegal.getDni_tutor_legal() %>">
+                              <a class="btn btn-outline-danger" onclick="confirmarBorrado(event)" href="./remove-tutor-legal?Dni_tutor_legal=<%= tutorLegal.getDni_tutor_legal() %>">Borrado definitivo del profesor</a>
+                     </form>
+                      </div>
+
+                     <script>
+                     function confirmarBorrado(event) {
+                     event.preventDefault();
+                          swal({
+                                  title: "¿Estás seguro?",
+                                     text: "¡Una vez borrado, no se puede recuperar!",
+                                     icon: "warning",
+                                     buttons: true,
+                                     dangerMode: true,
+                                   })
+                                   .then((willDelete) => {
+                                     if (willDelete) {
+                                     document.getElementById('formulario').submit();
+                                     } else {
+                                       swal("El tutor legal no ha sido borrado");
+                                     }
+                                   });
+                                 }
+                                 </script>
                    </div>
 
                     <%
                         }
                         %>
-
-
         </div>
  </main>
-
-
 
 <%@include file="Includes/footer.jsp"%>

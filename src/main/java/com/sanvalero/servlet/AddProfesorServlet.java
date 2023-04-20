@@ -7,7 +7,6 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -20,8 +19,8 @@ public class AddProfesorServlet extends HttpServlet {
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
 
-        String dni_tutor_legal = request.getParameter("dni_profesor");
-        String nombre_tutor_legal = request.getParameter("nombre_profesor");
+        String dni_profesor = request.getParameter("dni_profesor");
+        String nombre_profesor = request.getParameter("nombre_profesor");
         String direccion = request.getParameter("direccion");
         String email = request.getParameter("email");
         int telefono = Integer.parseInt(request.getParameter("telefono"));
@@ -30,11 +29,11 @@ public class AddProfesorServlet extends HttpServlet {
             Class.forName("com.mysql.cj.jdbc.Driver");
             Database.connect();
             Database.jdbi.withExtension(ProfesorDAO.class, dao -> {
-                dao.addProfesor(dni_tutor_legal, nombre_tutor_legal, direccion, email,telefono);
+                dao.addProfesor(dni_profesor, nombre_profesor, direccion, email,telefono);
                 return null;
             });
 
-            out.println("<div class='alert alert-success text-center' role='alert'>Tutor Legal registrado correctamente</div>");
+            out.println("<div class='alert alert-success text-center' role='alert'>Profesor registrado correctamente</div>");
         } catch (ClassNotFoundException cnfe) {
             cnfe.printStackTrace();
         }

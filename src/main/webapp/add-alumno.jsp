@@ -38,7 +38,7 @@
          Class.forName("com.mysql.cj.jdbc.Driver");
          Database.connect();
          List<Grupo> grupoList = Database.jdbi.withExtension(GrupoDAO.class, GrupoDAO::getGrupos);
-         List<TutorLegal> tutorLegalList = Database.jdbi.withExtension(TutorLegalDAO.class, TutorLegalDAO::getTutoreslegalesSinAlumnos);
+         List<TutorLegal> tutorLegalList = Database.jdbi.withExtension(TutorLegalDAO.class, TutorLegalDAO::getTutoresLegalesSinAlumnos);
      %>
 
 <%-- Formulario para añadir Alumno --%>

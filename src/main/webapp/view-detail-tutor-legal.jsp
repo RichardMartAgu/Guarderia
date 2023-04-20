@@ -38,7 +38,7 @@
         <b>Dirección:</b> <p class="card-title text-info-emphasis"> <%= tutorLegal.getDireccion() %> </p>
         <b>Teléfono:</b> <p class="card-title text-info-emphasis"> <%= tutorLegal.getTelefono()  %> </p>
         <b>Email:</b> <p class="card-title text-info-emphasis"> <%= tutorLegal.getEmail()  %> </p>
-        <a href="borrado-tutor-legal.jsp?id=<%= tutorLegal.getDni_tutor_legal() %>" class="btn btn-danger">Ir al listado de eliminar registro</a>
+        <a href="list-delete-tutor-legal.jsp" class="btn btn-danger">Ir al listado de eliminar registro</a>
 
       </div>
     </div>

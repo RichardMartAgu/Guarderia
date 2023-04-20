@@ -28,7 +28,7 @@
          Class.forName("com.mysql.cj.jdbc.Driver");
          Database.connect();
          List<Grupo> grupoList = Database.jdbi.withExtension(GrupoDAO.class, GrupoDAO::getGrupos);
-         List<Profesor> profesorList = Database.jdbi.withExtension(ProfesorDAO.class, ProfesorDAO::getProfesorSinGrupo);
+         List<Profesor> profesorList = Database.jdbi.withExtension(ProfesorDAO.class, ProfesorDAO::getProfesoresSinGrupo);
 
      %>
 

@@ -18,7 +18,13 @@ public interface ProfesorDAO {
             "LEFT JOIN grupo GR ON PF.dni_profesor = GR.dni_profesor " +
             "WHERE GR.dni_profesor IS NULL")
     @UseRowMapper(ProfesorMapper.class)
-    List<Profesor> getProfesorSinGrupo();
+    List<Profesor> getProfesoresSinGrupo();
+
+    @SqlQuery("SELECT * FROM profesor PF " +
+            "LEFT JOIN grupo GR ON PF.dni_profesor = GR.dni_profesor " +
+            "WHERE GR.dni_profesor")
+    @UseRowMapper(ProfesorMapper.class)
+    List<Profesor> getProfesoresConGrupo();
 
 
     @SqlQuery("SELECT * FROM Profesor WHERE Dni_profesor = ?")
@@ -28,4 +34,9 @@ public interface ProfesorDAO {
     @SqlUpdate("INSERT INTO Profesor (DNI_PROFESOR, NOMBRE_PROFESOR, DIRECCION, EMAIL, TELEFONO) VALUES (?, ?, ?, ?, ?)")
     void addProfesor(String dni_profesor, String nombre_profesor, String direccion, String email, int telefono);
 
+    @SqlUpdate("DELETE FROM Profesor WHERE DNI_PROFESOR = ?")
+    void removeProfesor(String dni_profesor);
+
+    @SqlUpdate("DELETE FROM Profesor WHERE letra_grupo = ?")
+    void removeProfesorLetraGrupo(String letra_grupo);
 }

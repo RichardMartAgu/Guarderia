@@ -42,10 +42,34 @@
         <b>Dni Tutor Legal:</b> <p class="card-title text-info-emphasis"> <%= alumno.getDni_tutor_legal() %> </p>
         <a href="./view-details-grupo.jsp?Letra_grupo=<%= alumno.getLetra_grupo() %>" class="btn btn-info">Datos Grupo</a>
         <a href="./view-detail-tutor-legal.jsp?Dni_tutor_legal=<%= alumno.getDni_tutor_legal()  %>" class="btn btn-info">Datos Tutor Legal</a>
-        <a href="remove-alumno?id=<%= alumno.getId_alumno() %>" class="btn btn-danger">Eliminar registro</a>
+        </div>
+        <form id="formulario" action="./remove-alumno" >
+          <input type="hidden" name="Id_alumno" value="<%= alumno.getId_alumno() %>">
+          <a class="btn btn-danger" onclick="confirmarBorrado(event)" href="./remove-alumno?Id_alumno=<%= alumno.getId_alumno() %>">Borrado definitivo del Alumno</a>
+            </form>
+          </div>
+        <script>
+        function confirmarBorrado(event) {
+          event.preventDefault();
+          swal({
+            title: "¿Estás seguro?",
+            text: "¡Una vez borrado, no se puede recuperar!",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+          })
+          .then((willDelete) => {
+            if (willDelete) {
+            document.getElementById('formulario').submit();
+            } else {
+              swal("El alumno no ha sido borrado");
+            }
+          });
+        }
+        </script>
 
 
-    </div>
+
 </div>
 
 </main>

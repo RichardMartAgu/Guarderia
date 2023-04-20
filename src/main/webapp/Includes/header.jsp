@@ -14,11 +14,12 @@ pageEncoding="UTF-8"%>
      <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
      <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 </head>
 
-
-<header >
+<header>
 
 <div class="position-relative  text-center ">
     <div class="col-md-5 p-lg-5 mx-auto my-1">

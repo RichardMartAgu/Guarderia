@@ -2,7 +2,6 @@
 <%@ page import="com.sanvalero.dao.ProfesorDAO" %>
 <%@ page import="com.sanvalero.domain.Profesor" %>
 
-
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 <%@include file="Includes/header.jsp"%>
@@ -16,7 +15,6 @@
     </ol>
   </nav>
 </div>
-
 
 <%
 
@@ -37,6 +35,7 @@
         <b>Dirección:</b> <p class="card-title text-info-emphasis"> <%= profesor.getDireccion() %> </p>
         <b>Teléfono:</b> <p class="card-title text-info-emphasis"> <%= profesor.getTelefono()  %> </p>
         <b>Email:</b> <p class="card-title text-info-emphasis"> <%= profesor.getEmail()  %> </p>
+        <a href="list-delete-profesor.jsp" class="btn btn-danger">Listado eliminar registro</a>
 
       </div>
     </div>

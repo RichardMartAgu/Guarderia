@@ -1,6 +1,19 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@include file="Includes/header.jsp"%>
 
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("form").on("submit", function(event) {
+            event.preventDefault();
+            var formValue = $(this).serialize();
+            $.post("add-profesor", formValue, function(data) {
+                $("#result").html(data);
+            }).fail(function(jqXHR, textStatus, errorThrown) {
+                alert("Fallo al registrar : " + errorThrown);
+            });
+        });
+    });
+</script>
 
 <main>
 

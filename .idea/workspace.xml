@@ -5,20 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9db6668a-cb1e-4af4-a681-10639ac779ef" name="Changes" comment="Mejorar funcion de borrado de todos.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/RemoveTutorLegalServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/borrado-tutor-legal.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/RemoveGrupoServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/RemoveProfesorServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/list-delete-alumno.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/list-delete-grupo.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/list-delete-profesor.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/dao/AlumnoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/dao/AlumnoDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/dao/GrupoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/dao/GrupoDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/dao/ProfesorDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/dao/ProfesorDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/dao/TutorLegalDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/dao/TutorLegalDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/AddAlumnoServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/AddAlumnoServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/AddProfesorServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/AddProfesorServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/AddTutorLegalServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/AddTutorLegalServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/RemoveAlumnoServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/RemoveAlumnoServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/RemoveTutorLegalServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/RemoveTutorLegalServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/Includes/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Includes/header.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/add-alumno.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/add-alumno.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/add-grupo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/add-grupo.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/add-profesor.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/add-profesor.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/add-tutor-legal.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/add-tutor-legal.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/borrado-tutor-legal.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/list-delete-tutor-legal.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/confirm-delete.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/confirm-delete.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/view-detail-alumno.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view-detail-alumno.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/view-detail-tutor-legal.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view-detail-tutor-legal.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/view-details-grupo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view-details-grupo.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/view-details-profesor.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view-details-profesor.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -190,7 +202,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681923672008</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Mejorar funcion de borrado de todos.">
+      <created>1681979225232</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1681979225232</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

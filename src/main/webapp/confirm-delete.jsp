@@ -1,7 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@include file="Includes/header.jsp"%>
 
-
+<script>
+      setTimeout(function() {
+        window.location.href = "index.jsp";
+      }, 2000);
+    </script>
 
 <div class="d-flex justify-content-center">
   <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">

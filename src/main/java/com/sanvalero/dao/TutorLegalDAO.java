@@ -1,7 +1,5 @@
 package com.sanvalero.dao;
 
-
-import com.sanvalero.domain.Profesor;
 import com.sanvalero.domain.TutorLegal;
 import org.jdbi.v3.sqlobject.statement.SqlQuery;
 import org.jdbi.v3.sqlobject.statement.SqlUpdate;
@@ -26,6 +24,7 @@ public interface TutorLegalDAO {
             "WHERE AL.dni_tutor_legal")
     @UseRowMapper(TutorLegalMapper.class)
     List<TutorLegal> getTutoresLegalesConAlumnos();
+
 
     @SqlQuery("SELECT * FROM Tutor_legal WHERE DNI_TUTOR_LEGAL = ?")
     @UseRowMapper(TutorLegalMapper.class)
