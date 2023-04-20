@@ -8,6 +8,7 @@
 <%@include file="Includes/header.jsp"%>
 
 <main>
+
 <div class="d-flex justify-content-center">
   <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
     <ol class="breadcrumb">
@@ -37,9 +38,11 @@
         <b>Dirección:</b> <p class="card-title text-info-emphasis"> <%= tutorLegal.getDireccion() %> </p>
         <b>Teléfono:</b> <p class="card-title text-info-emphasis"> <%= tutorLegal.getTelefono()  %> </p>
         <b>Email:</b> <p class="card-title text-info-emphasis"> <%= tutorLegal.getEmail()  %> </p>
+        <a href="borrado-tutor-legal.jsp?id=<%= tutorLegal.getDni_tutor_legal() %>" class="btn btn-danger">Ir al listado de eliminar registro</a>
 
       </div>
     </div>
+
 </div>
 
 </main>

@@ -11,17 +11,6 @@
 
 <main>
 
-<script type="text/javascript">
-    $(document).ready(function() {
-        $("form").on("submit", function(event) {
-            event.preventDefault();
-            var formValue = $(this).serialize();
-            $.post("remove-alumno", formValue, function(data) {
-                $("#result").html(data);
-            });
-        });
-    });
-</script>
 
 <div class="d-flex justify-content-center">
   <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
@@ -37,7 +26,7 @@
     Database.connect();
     int idAlumno = Integer.parseInt(request.getParameter("Id_alumno"));
     Alumno alumno = Database.jdbi.withExtension(AlumnoDAO.class, dao -> dao.getAlumno(idAlumno));
-    System.out.println(request.getParameter("Id_alumno"));
+
 %>
 
 <div class="container container-sm ">

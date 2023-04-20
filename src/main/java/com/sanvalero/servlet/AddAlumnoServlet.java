@@ -2,7 +2,6 @@ package com.sanvalero.servlet;
 
 import com.sanvalero.dao.Database;
 import com.sanvalero.dao.AlumnoDAO;
-import com.sanvalero.util.DateUtils;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -14,7 +13,6 @@ import java.io.PrintWriter;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
 import java.util.Date;
 
 
@@ -47,6 +45,7 @@ public class AddAlumnoServlet extends HttpServlet {
             });
 
             out.println("<div class='alert alert-success text-center' role='alert'>Alumno registrado correctamente</div>");
+
         } catch (ParseException | ClassNotFoundException cnfe) {
 
             cnfe.printStackTrace();

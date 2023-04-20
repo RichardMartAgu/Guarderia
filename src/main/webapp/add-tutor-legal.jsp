@@ -73,7 +73,7 @@
 
 
        <div class="col-12 text-center">
-                 <button type="submit" class="btn btn-primary" disabled>Registrar</button>
+                 <button type="submit" class="btn btn-primary" onclick="refreshPage()" disabled>Registrar</button>
              </div>
 
              <script>
@@ -111,6 +111,13 @@
                          }
                      });
                  });
+             </script>
+             <script type="text/javascript">
+                 function refreshPage() {
+                     setTimeout(function() {
+                         location.reload();
+                     }, 3000);
+                 }
              </script>
 
      </div>
