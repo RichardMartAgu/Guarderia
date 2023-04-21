@@ -35,6 +35,11 @@
         <%= letraGrupo%>
       </h2>
       <div class="card-body ">
+      <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
+         <title>Placeholder</title>
+         <image href="../guarderia_data/<%= grupo.getImagen() %>" width="100%" height="100%" />
+         <rect width="100%" height="100%" fill="var(--bs-secondary-color)" opacity="0"></rect>
+      </svg>
         <h5 class="card-title text-info-emphasis"><%= grupo.getNombre_grupo() %> </h5>
         <p class="card-text"><b class="text-decoration-underline">DNI profesor al cargo:</b><br> <%= grupo.getDni_profesor() %></p>
         <%

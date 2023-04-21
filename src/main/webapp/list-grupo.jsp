@@ -29,7 +29,11 @@
             %>
 
        <div class="col-sm-4 text-center" >
-         <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>
+        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
+                           <title>Placeholder</title>
+                           <image href="../guarderia_data/<%= grupo.getImagen() %>" width="100%" height="100%" />
+                           <rect width="100%" height="100%" fill="var(--bs-secondary-color)" opacity="0"></rect>
+                          </svg>
          <h2 class="fw-normal"><%= grupo.getLetra_grupo() %> <br> <%= grupo.getNombre_grupo() %></h2>
          <br>
          <p><a class="btn btn-outline-info" href="./view-details-grupo.jsp?Letra_grupo=<%= grupo.getLetra_grupo()%>">Entrar</a></p>

@@ -2,17 +2,27 @@
 <%@include file="Includes/header.jsp"%>
 
 <script type="text/javascript">
-    $(document).ready(function() {
-        $("form").on("submit", function(event) {
-            event.preventDefault();
-            var formValue = $(this).serialize();
-            $.post("add-profesor", formValue, function(data) {
-                $("#result").html(data);
-            }).fail(function(jqXHR, textStatus, errorThrown) {
-                alert("Fallo al registrar : " + errorThrown);
-            });
-        });
-    });
+  $(document).ready(function() {
+      $("form").on("submit", function(event) {
+          event.preventDefault();
+          var form = $(this)[0];
+          var formData = new FormData(form);
+          $.ajax({
+              url: "add-profesor",
+              type: "POST",
+              data: formData,
+              processData: false,
+              contentType: false,
+              success: function(data) {
+                  $("#result").html(data);
+              },
+              error: function(jqXHR, textStatus, errorThrown) {
+                  $("#error-message").html("Fallo al registrar! " + errorThrown);
+              }
+          });
+      });
+  });
+
 </script>
 
 <main>
@@ -21,7 +31,7 @@
   <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
     <ol class="breadcrumb">
       <li class="breadcrumb-item"><a href="index.jsp">Inicio</a></li>
-      <li class="breadcrumb-item active" aria-current="page">Listar Alumnos</li>
+      <li class="breadcrumb-item active" aria-current="page">Añadir Profesor</li>
     </ol>
   </nav>
 </div>
@@ -71,6 +81,10 @@
          </div>
       </div>
 
+    <div class="col-md-6">
+                      <label for="image" class="form-label">Añadir imagen (opcional)</label>
+                      <input type="file" class="form-control" id="image" name="image">
+           </div>
 
        <div class="col-12 text-center">
                  <button type="submit" class="btn btn-primary" onclick="refreshPage()"disabled>Registrar</button>
@@ -89,7 +103,7 @@
                          } else {
                              var formValue = $(this).serialize();
                              $submitButton.prop('disabled', true);
-                             $.post("add-alumno", formValue, function(data) {
+                             $.post("add-profesor", formValue, function(data) {
                                  $("#result").html(data);
                                  $submitButton.prop('disabled', false);
                              });
@@ -112,11 +126,11 @@
                      });
                  });
              </script>
-            <script type="text/javascript">
+          <script type="text/javascript">
                 function refreshPage() {
                     setTimeout(function() {
                         location.reload();
-                    }, 3000);
+                    }, 2000);
                 }
             </script>
 
@@ -124,6 +138,7 @@
      </div>
 </form>
  <div id="result"></div>
+ <div class= "text-center bg-danger-subtle text-danger-emphasis fs-4" id="error-message"></div>
 </div>
 <main/>
 

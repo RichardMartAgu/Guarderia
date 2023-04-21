@@ -14,7 +14,7 @@ public class GrupoMapper implements RowMapper<Grupo> {
         return new Grupo
                 (rs.getString("LETRA_GRUPO"),
                 rs.getString("NOMBRE_GRUPO"),
-                rs.getString("DNI_PROFESOR"));
-
+                rs.getString("DNI_PROFESOR"),
+                rs.getString("IMAGEN"));
     }
 }

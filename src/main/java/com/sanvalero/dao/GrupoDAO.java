@@ -31,8 +31,8 @@ public interface GrupoDAO {
     @UseRowMapper(GrupoMapper.class)
     Grupo getGrupo(String letra_grupo);
 
-    @SqlUpdate("INSERT INTO Grupo (LETRA_GRUPO, NOMBRE_GRUPO, DNI_PROFESOR) VALUES (?, ?, ?)")
-    void addGrupo(String letra_grupo, String nombre_grupo, String dni_profesor);
+    @SqlUpdate("INSERT INTO Grupo (LETRA_GRUPO, NOMBRE_GRUPO, DNI_PROFESOR,IMAGEN) VALUES (?, ?, ?,?)")
+    void addGrupo(String letra_grupo, String nombre_grupo, String dni_profesor,String imagen);
 
     @SqlUpdate("DELETE FROM grupo WHERE  LETRA_GRUPO = ?")
     void removeGrupo(String letra_grupo);

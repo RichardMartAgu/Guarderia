@@ -29,7 +29,11 @@
             %>
 
        <div class="col-sm-4 text-center" >
-         <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>
+         <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
+          <title>Placeholder</title>
+          <image href="../guarderia_data/<%= tutorLegal.getImagen() %>" width="100%" height="100%" />
+          <rect width="100%" height="100%" fill="var(--bs-secondary-color)" opacity="0"></rect>
+         </svg>
          <h2 class="fw-normal"><%= tutorLegal.getNombre_tutor_legal() %></h2>
          <h2 class="fw-normal"><%= tutorLegal.getDni_tutor_legal() %></h2>
          <br>

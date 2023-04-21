@@ -20,5 +20,7 @@ public class Alumno {
     private String letra_grupo;
     @NonNull
     private String dni_tutor_legal;
+    @NonNull
+    private String imagen;
 
 }

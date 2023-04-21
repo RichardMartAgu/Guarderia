@@ -19,4 +19,6 @@ public class Profesor {
     private String email;
     @NonNull
     private int telefono;
+    private String imagen;
+
 }

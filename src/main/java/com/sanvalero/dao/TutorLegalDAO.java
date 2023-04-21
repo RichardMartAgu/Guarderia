@@ -31,8 +31,8 @@ public interface TutorLegalDAO {
     TutorLegal getTutorLegal(String Dni_tutor_legal);
 
 
-    @SqlUpdate("INSERT INTO Tutor_legal (DNI_TUTOR_LEGAL, NOMBRE_TUTOR_LEGAL, DIRECCION, EMAIL, TELEFONO) VALUES (?, ?, ?, ?, ?)")
-    void addTutorLegal(String dni_tutor_legal, String nombre_tutor_legal, String direccion, String email, int telefono);
+    @SqlUpdate("INSERT INTO Tutor_legal (DNI_TUTOR_LEGAL, NOMBRE_TUTOR_LEGAL, DIRECCION, EMAIL, TELEFONO,IMAGEN ) VALUES (?, ?, ?, ?, ?,?)")
+    void addTutorLegal(String dni_tutor_legal, String nombre_tutor_legal, String direccion, String email, int telefono, String imagen);
 
 
     @SqlUpdate("DELETE FROM tutor_legal WHERE DNI_TUTOR_LEGAL = ?")

@@ -16,8 +16,8 @@ public class TutorLegalMapper implements RowMapper<TutorLegal> {
                 rs.getString("NOMBRE_TUTOR_LEGAL"),
                 rs.getString("DIRECCION"),
                 rs.getString("EMAIL"),
-                rs.getInt("TELEFONO")
-        );
+                rs.getInt("TELEFONO"),
+                rs.getString("IMAGEN"));
     }
 }
 

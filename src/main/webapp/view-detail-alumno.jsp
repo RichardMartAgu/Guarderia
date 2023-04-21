@@ -36,6 +36,12 @@
         <%= idAlumno%>
       </h2>
       <div class="card-body ">
+       <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
+           <title>Placeholder</title>
+           <image href="../guarderia_data/<%= alumno.getImagen() %>" width="100%" height="100%" />
+           <rect width="100%" height="100%" fill="var(--bs-secondary-color)" opacity="0"></rect>
+          </svg>
+
         <h5 class="card-title text-info-emphasis"><%= alumno.getNombre_alumno() %> </h5>
         <p class="card-text"><b class="text-decoration-underline">Fecha de nacimiento:</b><br> <%= alumno.getFecha_nacimiento() %></p>
         <b>Letra grupo:</b> <p class="card-title text-info-emphasis"> <%= alumno.getLetra_grupo() %> </p>
@@ -48,6 +54,8 @@
           <a class="btn btn-danger" onclick="confirmarBorrado(event)" href="./remove-alumno?Id_alumno=<%= alumno.getId_alumno() %>">Borrado definitivo del Alumno</a>
             </form>
           </div>
+
+
         <script>
         function confirmarBorrado(event) {
           event.preventDefault();

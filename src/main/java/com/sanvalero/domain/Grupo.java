@@ -14,6 +14,6 @@ public class Grupo {
     private String nombre_grupo;
     @NonNull
     private String dni_profesor;
-
+    private String imagen;
 
 }

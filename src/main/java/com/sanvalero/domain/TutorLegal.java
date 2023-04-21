@@ -19,4 +19,5 @@ public class TutorLegal {
     private String email;
     @NonNull
     private int telefono;
+    private String imagen;
 }

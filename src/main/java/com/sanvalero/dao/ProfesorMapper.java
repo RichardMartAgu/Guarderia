@@ -16,7 +16,8 @@ public class ProfesorMapper implements RowMapper<Profesor> {
                         rs.getString("NOMBRE_PROFESOR"),
                         rs.getString("DIRECCION"),
                         rs.getString("EMAIL"),
-                        rs.getInt("TELEFONO")
-                );
+                        rs.getInt("TELEFONO"),
+                        rs.getString("IMAGEN"));
+
     }
 }

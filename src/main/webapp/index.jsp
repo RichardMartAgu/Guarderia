@@ -28,7 +28,7 @@
         <h2 class="display-5">Grupos</h2>
         <br/>
         <a href="./list-grupo.jsp" class="btn btn-outline-info" role="button" >Listar todos los grupos</a>
-        <a href="./add-grupo.jsp" class="btn btn-outline-success" role="button" >Administrar datos Grupo</a>
+        <a href="./add-grupo.jsp" class="btn btn-outline-success" role="button" >Añadir Grupo</a>
         <a href="./list-delete-grupo.jsp" class="btn btn-outline-danger" role="button" >Listado de posible borrado</a>
       </div>
       <div class="bg-body shadow-sm mx-auto" style="width: 700px; border-radius: 21px 21px 0 0;">
@@ -43,7 +43,7 @@
         <h2 class="display-5">Profesores</h2>
         <br/>
         <a href="./list-profesores.jsp" class="btn btn-outline-info" role="button" >Listar Profesores</a>
-        <a href="./add-profesor.jsp"  class="btn btn-outline-success" role="button" >Administrar datos profesores</a>
+        <a href="./add-profesor.jsp"  class="btn btn-outline-success" role="button" >Añadir profesores</a>
         <a href="./list-delete-profesor.jsp" class="btn btn-outline-danger" role="button" >Listado de posible borrado</a>
       </div>
       <div class="bg-body shadow-sm mx-auto" style="width: 700px; border-radius: 21px 21px 0 0;">
@@ -58,7 +58,7 @@
         <h2 class="display-5">Tutor Legal</h2>
         <br/>
         <a href="./list-tutor-legal.jsp" class="btn btn-outline-info" role="button" >Listar Tutores Legales</a>
-        <a href="./add-tutor-legal.jsp" class="btn btn-outline-success" role="button" >Administrar Tutores Legales</a>
+        <a href="./add-tutor-legal.jsp" class="btn btn-outline-success" role="button" >Añadir Tutor Legal</a>
         <a href="./list-delete-tutor-legal.jsp" class="btn btn-outline-danger" role="button" >Listado de posible borrado</a>
       </div>
       <div class="bg-body shadow-sm mx-auto" style="width: 700px; border-radius: 21px 21px 0 0;">
@@ -73,7 +73,7 @@
         <h2 class="display-5">Alumno</h2>
         <br/>
         <a href="./list-alumnos.jsp" class="btn btn-outline-info" role="button" >Listar Alumnos</a>
-        <a href="./add-alumno.jsp" class="btn btn-outline-success" role="button" >Administrar Alumnos</a>
+        <a href="./add-alumno.jsp" class="btn btn-outline-success" role="button" >Añadir Alumno</a>
         <a href="./list-delete-alumno.jsp" class="btn btn-outline-danger" role="button" >Listado de posible borrado</a>
       </div>
       <div class="bg-body shadow-sm mx-auto" style="width: 700px; border-radius: 21px 21px 0 0;">

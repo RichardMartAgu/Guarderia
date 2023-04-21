@@ -29,37 +29,40 @@
             %>
 
        <div class="col-sm-4 text-center" >
-         <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>
+         <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
+         <title>Placeholder</title>
+         <image href="../guarderia_data/<%= alumno.getImagen() %>" width="100%" height="100%" />
+         <rect width="100%" height="100%" fill="var(--bs-secondary-color)" opacity="0"></rect>
+        </svg>
+
          <h2 class="fw-normal">ID = <%= alumno.getId_alumno() %> </h2>
          <h2 class="fw-normal"><%= alumno.getNombre_alumno() %></h2>
          <br>
-         <p><a class="btn btn-outline-info" href="./view-detail-alumno.jsp?Id_alumno=<%= alumno.getId_alumno()%>">Entrar</a></p>
+         <p><a class="btn btn-outline-info" href="./view-detail-alumno.jsp?Id_alumno=<%= alumno.getId_alumno()%>">Ver mas datos</a></p>
          <form id="formulario" action="./remove-alumno" >
-             <input type="hidden" name="Id_alumno" value="<%= alumno.getId_alumno() %>">
-             <a class="btn btn-outline-danger" onclick="confirmarBorrado(event)" href="./remove-alumno?Id_alumno=<%= alumno.getId_alumno() %>">Borrado definitivo del Alumno</a>
-         </form>
-
-          </div>
-
-            <script>
-            function confirmarBorrado(event) {
-            event.preventDefault();
+                   <input type="hidden" name="Id_alumno" value="<%= alumno.getId_alumno() %>">
+                   <a class="btn btn-outline-danger" onclick="confirmarBorrado(event)" href="./remove-alumno?Id_alumno=<%= alumno.getId_alumno() %>">Borrado definitivo del Alumno</a>
+                     </form>
+       </div>
+         <script>
+               function confirmarBorrado(event) {
+                 event.preventDefault();
                  swal({
-                         title: "¿Estás seguro?",
-                            text: "¡Una vez borrado, no se puede recuperar!",
-                            icon: "warning",
-                            buttons: true,
-                            dangerMode: true,
-                          })
-                          .then((willDelete) => {
-                            if (willDelete) {
-                            document.getElementById('formulario').submit();
-                            } else {
-                              swal("El Alumno no ha sido borrado");
-                            }
-                          });
-                        }
-                        </script>
+                   title: "¿Estás seguro?",
+                   text: "¡Una vez borrado, no se puede recuperar!",
+                   icon: "warning",
+                   buttons: true,
+                   dangerMode: true,
+                 })
+                 .then((willDelete) => {
+                   if (willDelete) {
+                   document.getElementById('formulario').submit();
+                   } else {
+                     swal("El alumno no ha sido borrado");
+                   }
+                 });
+               }
+               </script>
 
 
   <%

@@ -9,15 +9,27 @@
 <%@include file="Includes/header.jsp"%>
 
 <script type="text/javascript">
-    $(document).ready(function() {
-        $("form").on("submit", function(event) {
-            event.preventDefault();
-            var formValue = $(this).serialize();
-            $.post("add-tutor-legal", formValue, function(data) {
-                $("#result").html(data);
-            });
-        });
-    });
+  $(document).ready(function() {
+      $("form").on("submit", function(event) {
+          event.preventDefault();
+          var form = $(this)[0];
+          var formData = new FormData(form);
+          $.ajax({
+              url: "add-alumno",
+              type: "POST",
+              data: formData,
+              processData: false,
+              contentType: false,
+              success: function(data) {
+                  $("#result").html(data);
+              },
+              error: function(jqXHR, textStatus, errorThrown) {
+                  $("#error-message").html("Fallo al registrar! " + errorThrown);
+              }
+          });
+      });
+  });
+
 </script>
 
 <main>
@@ -46,7 +58,7 @@
 <div class="container px-5">
     <h3 class="display-4 fw-normal text-center">Añadir Alumno</h3>
     <br/> <br/>
-<form class="row g-3 needs-validation" novalidate>
+<form class="row g-3 needs-validation" method="post" action="add-alumno" enctype="multipart/form-data" novalidate>
 
    <div class="col-md-6">
            <label for="nombre" class="form-label">Nombre alumno</label>
@@ -102,6 +114,11 @@
            </div>
        </div>
 
+       <div class="col-md-6">
+                  <label for="image" class="form-label">Añadir imagen (opcional)</label>
+                  <input type="file" class="form-control" id="image" name="image">
+       </div>
+
        <div class="col-12 text-center">
            <button type="submit" class="btn btn-primary" onclick="refreshPage()"disabled>Registrar</button>
        </div>
@@ -135,7 +152,8 @@
 
                });
            });
-       </script>
+          </script>
+
        <script type="text/javascript">
            function refreshPage() {
                setTimeout(function() {
@@ -150,6 +168,7 @@
 
 </form>
  <div id="result"></div>
+ <div class= "text-center bg-danger-subtle text-danger-emphasis fs-4" id="error-message"></div>
 </div>
 <main/>
 

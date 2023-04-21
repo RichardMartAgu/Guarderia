@@ -31,8 +31,8 @@ public interface ProfesorDAO {
     @UseRowMapper(ProfesorMapper.class)
     Profesor getProfesor(String Dni_profesor);
 
-    @SqlUpdate("INSERT INTO Profesor (DNI_PROFESOR, NOMBRE_PROFESOR, DIRECCION, EMAIL, TELEFONO) VALUES (?, ?, ?, ?, ?)")
-    void addProfesor(String dni_profesor, String nombre_profesor, String direccion, String email, int telefono);
+    @SqlUpdate("INSERT INTO Profesor (DNI_PROFESOR, NOMBRE_PROFESOR, DIRECCION, EMAIL, TELEFONO,IMAGEN) VALUES (?, ?, ?, ?, ?,?)")
+    void addProfesor(String dni_profesor, String nombre_profesor, String direccion, String email, int telefono, String imagen);
 
     @SqlUpdate("DELETE FROM Profesor WHERE DNI_PROFESOR = ?")
     void removeProfesor(String dni_profesor);

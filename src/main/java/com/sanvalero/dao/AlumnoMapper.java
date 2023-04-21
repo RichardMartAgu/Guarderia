@@ -16,7 +16,8 @@ public class AlumnoMapper implements RowMapper<Alumno> {
                 rs.getString("NOMBRE_ALUMNO"),
                 DateUtils.getLocalDate(rs.getDate("FECHA_NACIMIENTO")),
                 rs.getString("LETRA_GRUPO"),
-                rs.getString("DNI_TUTOR_LEGAL"));
+                rs.getString("DNI_TUTOR_LEGAL"),
+                rs.getString("IMAGEN"));
 
     }
 }

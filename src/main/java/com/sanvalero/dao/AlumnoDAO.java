@@ -25,8 +25,8 @@ public interface AlumnoDAO {
     @UseRowMapper(AlumnoMapper.class)
     List<Alumno> getAlumnoLetraGrupo(String letra_grupo);
 
-    @SqlUpdate("INSERT INTO Alumno (NOMBRE_ALUMNO, FECHA_NACIMIENTO, LETRA_GRUPO, DNI_TUTOR_LEGAL) VALUES ( ?,?, ?, ?)")
-    void addAlumno(String nombre_alumno, Date fecha_nacimiento, String letra_grupo, String dni_tutor_legal);
+    @SqlUpdate("INSERT INTO Alumno (NOMBRE_ALUMNO, FECHA_NACIMIENTO, LETRA_GRUPO, DNI_TUTOR_LEGAL,IMAGEN) VALUES ( ?,?, ?, ?,?)")
+    void addAlumno(String nombre_alumno, Date fecha_nacimiento, String letra_grupo, String dni_tutor_legal,String imagen);
 
     @SqlUpdate("DELETE FROM Alumno WHERE ID_ALUMNO = ?")
     void removeAlumno(int id);
