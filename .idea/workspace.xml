@@ -4,21 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9db6668a-cb1e-4af4-a681-10639ac779ef" name="Changes" comment="Subir fotos de todas las tablas.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/EditAlumnoServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/SearchAlumnoServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/edit-alumno.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/search-alumno.jsp" afterDir="false" />
+    <list default="true" id="9db6668a-cb1e-4af4-a681-10639ac779ef" name="Changes" comment="Editar y buscar de Alumnos.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/dao/AlumnoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/dao/AlumnoDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/dao/ProfesorDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/dao/ProfesorDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/add-alumno.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/add-alumno.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/add-grupo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/add-grupo.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/add-tutor-legal.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/add-tutor-legal.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/list-delete-tutor-legal.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/list-delete-tutor-legal.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/view-detail-alumno.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view-detail-alumno.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -211,7 +198,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682096943409</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Editar y buscar de Alumnos.">
+      <created>1682164671225</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1682164671225</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -228,7 +222,8 @@
     <MESSAGE value="Funcion de agregado de todos." />
     <MESSAGE value="Mejorar funcion de borrado de todos." />
     <MESSAGE value="Subir fotos de todas las tablas." />
-    <option name="LAST_COMMIT_MESSAGE" value="Subir fotos de todas las tablas." />
+    <MESSAGE value="Editar y buscar de Alumnos." />
+    <option name="LAST_COMMIT_MESSAGE" value="Editar y buscar de Alumnos." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
