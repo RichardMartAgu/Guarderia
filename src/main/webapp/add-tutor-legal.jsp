@@ -103,10 +103,7 @@
                          } else {
                              var formValue = $(this).serialize();
                              $submitButton.prop('disabled', true);
-                             $.post("add-tutor-legal", formValue, function(data) {
-                                 $("#result").html(data);
-                                 $submitButton.prop('disabled', false);
-                             });
+
                          }
                          $(this).addClass('was-validated');
                      });
@@ -126,11 +123,11 @@
                      });
                  });
              </script>
-             <%--<script type="text/javascript">
+             <script type="text/javascript">
                  function refreshPage() {
                      setTimeout(function() {
                          location.reload();
-                     }, 2000);--%>
+                     }, 2000);
                  }
              </script>
 

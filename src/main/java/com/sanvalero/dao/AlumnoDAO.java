@@ -25,6 +25,14 @@ public interface AlumnoDAO {
     @UseRowMapper(AlumnoMapper.class)
     List<Alumno> getAlumnoLetraGrupo(String letra_grupo);
 
+    @SqlQuery("SELECT * FROM Alumno WHERE ID_ALUMNO = ? AND LETRA_GRUPO = ?")
+    @UseRowMapper(AlumnoMapper.class)
+    List<Alumno> getSearchAlumnoAnd(String id_alumno,String letra_grupo);
+
+    @SqlQuery("SELECT * FROM Alumno WHERE ID_ALUMNO = ? OR LETRA_GRUPO = ?")
+    @UseRowMapper(AlumnoMapper.class)
+    List<Alumno> getSearchAlumnoOr(String id_alumno,String letra_grupo);
+
     @SqlUpdate("INSERT INTO Alumno (NOMBRE_ALUMNO, FECHA_NACIMIENTO, LETRA_GRUPO, DNI_TUTOR_LEGAL,IMAGEN) VALUES ( ?,?, ?, ?,?)")
     void addAlumno(String nombre_alumno, Date fecha_nacimiento, String letra_grupo, String dni_tutor_legal,String imagen);
 
@@ -33,5 +41,9 @@ public interface AlumnoDAO {
 
     @SqlUpdate("DELETE FROM Alumno WHERE DNI_TUTOR_LEGAL = ?")
     void removeAlumnoDniTutorLegal(String dni_tutor_legal);
+
+    @SqlUpdate("UPDATE Alumno SET NOMBRE_ALUMNO = ?, FECHA_NACIMIENTO = ?, LETRA_GRUPO = ?, DNI_TUTOR_LEGAL = ? WHERE ID_ALUMNO = ?")
+    void editAlumno(String nombre_alumno, Date fecha_nacimiento, String letra_grupo, String dni_tutor_legal, int id_alumno);
+
 
 }

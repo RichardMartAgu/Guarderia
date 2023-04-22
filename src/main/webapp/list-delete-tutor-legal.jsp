@@ -45,7 +45,7 @@
          <h2 class="fw-normal"><%= tutorLegal.getDni_tutor_legal() %></h2>
          <br>
          <p><a class="btn btn-outline-info" href="./view-detail-tutor-legal.jsp?Dni_tutor_legal=<%= tutorLegal.getDni_tutor_legal() %>">Más datos del tutor legal</a></p>
-         <a class="btn btn-outline-danger" href="./remove-alumno?Dni_tutor_legal=<%= tutorLegal.getDni_tutor_legal() %>">Borrado definitivo del niño al cargo</a></p>
+         <a class="btn btn-outline-danger" href="./remove-alumno?Dni_tutor_legal=<%= tutorLegal.getDni_tutor_legal() %>"onclick="confirmarBorrado(event)">Borrado definitivo del niño al cargo</a></p>
        </div>
 
         <%

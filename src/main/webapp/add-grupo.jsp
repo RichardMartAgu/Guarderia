@@ -168,6 +168,6 @@
  <div id="result"></div>
  <div class= "text-center bg-danger-subtle text-danger-emphasis fs-4" id="error-message"></div>
 </div>
-<main/>
+</main>
 
 <%@include file="Includes/footer.jsp"%>

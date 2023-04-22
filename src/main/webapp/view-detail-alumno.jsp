@@ -51,6 +51,7 @@
         </div>
         <form id="formulario" action="./remove-alumno" >
           <input type="hidden" name="Id_alumno" value="<%= alumno.getId_alumno() %>">
+           <a class="btn btn-warning"  href="./edit-alumno.jsp?Id_alumno=<%= alumno.getId_alumno() %>">Editar Alumno</a>
           <a class="btn btn-danger" onclick="confirmarBorrado(event)" href="./remove-alumno?Id_alumno=<%= alumno.getId_alumno() %>">Borrado definitivo del Alumno</a>
             </form>
           </div>
