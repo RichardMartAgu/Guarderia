@@ -22,41 +22,45 @@ import java.util.UUID;
 @MultipartConfig
 public class AddProfesorServlet extends HttpServlet {
 
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+  @Override
+  protected void doPost(HttpServletRequest request, HttpServletResponse response)
+      throws ServletException, IOException {
 
-        response.setContentType("text/html");
-        PrintWriter out = response.getWriter();
+    response.setContentType("text/html");
+    PrintWriter out = response.getWriter();
 
-        String dni_profesor = request.getParameter("dni_profesor");
-        String nombre_profesor = request.getParameter("nombre_profesor");
-        String direccion = request.getParameter("direccion");
-        String email = request.getParameter("email");
-        int telefono = Integer.parseInt(request.getParameter("telefono"));
-        String imagePath = request.getServletContext().getInitParameter("image-path");
+    String dni_profesor = request.getParameter("dni_profesor");
+    String nombre_profesor = request.getParameter("nombre_profesor");
+    String direccion = request.getParameter("direccion");
+    String email = request.getParameter("email");
+    int telefono = Integer.parseInt(request.getParameter("telefono"));
+    String imagePath = request.getServletContext().getInitParameter("image-path");
 
-        try {
+    try {
 
-            Part imagePart = request.getPart("image");
-            String imagen;
-            if (imagePart.getSize() == 0) {
-                imagen = "no_image.jpg";
-            } else {
-                imagen = UUID.randomUUID() + ".jpg";
-                InputStream fileStream = imagePart.getInputStream();
-                Files.copy(fileStream, Path.of(imagePath + File.separator + imagen));
-            }
+      Part imagePart = request.getPart("image");
+      String imagen;
+      if (imagePart.getSize() == 0) {
+        imagen = "no_image.jpg";
+      } else {
+        imagen = UUID.randomUUID() + ".jpg";
+        InputStream fileStream = imagePart.getInputStream();
+        Files.copy(fileStream, Path.of(imagePath + File.separator + imagen));
+      }
 
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            Database.connect();
-            Database.jdbi.withExtension(ProfesorDAO.class, dao -> {
-                dao.addProfesor(dni_profesor, nombre_profesor, direccion, email,telefono,imagen);
-                return null;
-            });
+      Class.forName("com.mysql.cj.jdbc.Driver");
+      Database.connect();
+      Database.jdbi.withExtension(
+          ProfesorDAO.class,
+          dao -> {
+            dao.addProfesor(dni_profesor, nombre_profesor, direccion, email, telefono, imagen);
+            return null;
+          });
 
-            out.println("<div class='alert alert-success text-center' role='alert'>Profesor registrado correctamente</div>");
-        } catch (ClassNotFoundException cnfe) {
-            cnfe.printStackTrace();
-        }
+      out.println(
+          "<div class='alert alert-success text-center' role='alert'>Profesor registrado correctamente</div>");
+    } catch (ClassNotFoundException cnfe) {
+      cnfe.printStackTrace();
     }
+  }
 }

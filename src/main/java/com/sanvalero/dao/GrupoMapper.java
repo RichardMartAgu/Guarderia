@@ -9,12 +9,12 @@ import java.sql.SQLException;
 
 public class GrupoMapper implements RowMapper<Grupo> {
 
-    @Override
-    public Grupo map(ResultSet rs, StatementContext ctx) throws SQLException {
-        return new Grupo
-                (rs.getString("LETRA_GRUPO"),
-                rs.getString("NOMBRE_GRUPO"),
-                rs.getString("DNI_PROFESOR"),
-                rs.getString("IMAGEN"));
-    }
+  @Override
+  public Grupo map(ResultSet rs, StatementContext ctx) throws SQLException {
+    return new Grupo(
+        rs.getString("LETRA_GRUPO"),
+        rs.getString("NOMBRE_GRUPO"),
+        rs.getString("DNI_PROFESOR"),
+        rs.getString("IMAGEN"));
+  }
 }

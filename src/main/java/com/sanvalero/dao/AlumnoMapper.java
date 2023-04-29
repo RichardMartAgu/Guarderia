@@ -10,14 +10,14 @@ import java.sql.SQLException;
 
 public class AlumnoMapper implements RowMapper<Alumno> {
 
-    @Override
-    public Alumno map(ResultSet rs, StatementContext ctx) throws SQLException {
-        return new Alumno(rs.getInt("ID_ALUMNO"),
-                rs.getString("NOMBRE_ALUMNO"),
-                DateUtils.getLocalDate(rs.getDate("FECHA_NACIMIENTO")),
-                rs.getString("LETRA_GRUPO"),
-                rs.getString("DNI_TUTOR_LEGAL"),
-                rs.getString("IMAGEN"));
-
-    }
+  @Override
+  public Alumno map(ResultSet rs, StatementContext ctx) throws SQLException {
+    return new Alumno(
+        rs.getInt("ID_ALUMNO"),
+        rs.getString("NOMBRE_ALUMNO"),
+        DateUtils.getLocalDate(rs.getDate("FECHA_NACIMIENTO")),
+        rs.getString("LETRA_GRUPO"),
+        rs.getString("DNI_TUTOR_LEGAL"),
+        rs.getString("IMAGEN"));
+  }
 }

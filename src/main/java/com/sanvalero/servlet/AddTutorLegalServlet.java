@@ -22,40 +22,45 @@ import java.util.UUID;
 @MultipartConfig
 public class AddTutorLegalServlet extends HttpServlet {
 
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+  @Override
+  protected void doPost(HttpServletRequest request, HttpServletResponse response)
+      throws ServletException, IOException {
 
-        response.setContentType("text/html");
-        PrintWriter out = response.getWriter();
+    response.setContentType("text/html");
+    PrintWriter out = response.getWriter();
 
-        String dni_tutor_legal = request.getParameter("dni_tutor_legal");
-        String nombre_tutor_legal = request.getParameter("nombre_tutor_legal");
-        String direccion = request.getParameter("direccion");
-        String email = request.getParameter("email");
-        int telefono = Integer.parseInt(request.getParameter("telefono"));
-        String imagePath = request.getServletContext().getInitParameter("image-path");
+    String dni_tutor_legal = request.getParameter("dni_tutor_legal");
+    String nombre_tutor_legal = request.getParameter("nombre_tutor_legal");
+    String direccion = request.getParameter("direccion");
+    String email = request.getParameter("email");
+    int telefono = Integer.parseInt(request.getParameter("telefono"));
+    String imagePath = request.getServletContext().getInitParameter("image-path");
 
-        try {
+    try {
 
-            Part imagePart = request.getPart("image");
-            String imagen;
-            if (imagePart.getSize() == 0) {
-                imagen = "no_image.jpg";
-            } else {
-                imagen = UUID.randomUUID() + ".jpg";
-                InputStream fileStream = imagePart.getInputStream();
-                Files.copy(fileStream, Path.of(imagePath + File.separator + imagen));
-            }
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            Database.connect();
-            Database.jdbi.withExtension(TutorLegalDAO.class, dao -> {
-                dao.addTutorLegal(dni_tutor_legal, nombre_tutor_legal, direccion, email,telefono, imagen);
-                return null;
-            });
+      Part imagePart = request.getPart("image");
+      String imagen;
+      if (imagePart.getSize() == 0) {
+        imagen = "no_image.jpg";
+      } else {
+        imagen = UUID.randomUUID() + ".jpg";
+        InputStream fileStream = imagePart.getInputStream();
+        Files.copy(fileStream, Path.of(imagePath + File.separator + imagen));
+      }
+      Class.forName("com.mysql.cj.jdbc.Driver");
+      Database.connect();
+      Database.jdbi.withExtension(
+          TutorLegalDAO.class,
+          dao -> {
+            dao.addTutorLegal(
+                dni_tutor_legal, nombre_tutor_legal, direccion, email, telefono, imagen);
+            return null;
+          });
 
-            out.println("<div class='alert alert-success text-center' role='alert'>Tutor Legal registrado correctamente</div>");
-        } catch (ClassNotFoundException cnfe) {
-            cnfe.printStackTrace();
-        }
+      out.println(
+          "<div class='alert alert-success text-center' role='alert'>Tutor Legal registrado correctamente</div>");
+    } catch (ClassNotFoundException cnfe) {
+      cnfe.printStackTrace();
     }
+  }
 }

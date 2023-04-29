@@ -15,44 +15,43 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-
-
 @WebServlet("/edit-alumno")
-
 public class EditAlumnoServlet extends HttpServlet {
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+  @Override
+  protected void doPost(HttpServletRequest request, HttpServletResponse response)
+      throws ServletException, IOException {
 
-        response.setContentType("text/html");
-        PrintWriter out = response.getWriter();
+    response.setContentType("text/html");
+    PrintWriter out = response.getWriter();
 
-        String dni_tutor_legal = request.getParameter("dni_tutor_legal");
-        String nombre_alumno = request.getParameter("nombre_alumno");
-        String fecha_texto = request.getParameter("fecha_nacimiento");
-        String letra_grupo = request.getParameter("letra_grupo");
-        int id_alumno = Integer.parseInt(request.getParameter("Id_alumno"));
-        System.out.println(id_alumno);
+    String dni_tutor_legal = request.getParameter("dni_tutor_legal");
+    String nombre_alumno = request.getParameter("nombre_alumno");
+    String fecha_texto = request.getParameter("fecha_nacimiento");
+    String letra_grupo = request.getParameter("letra_grupo");
+    int id_alumno = Integer.parseInt(request.getParameter("Id_alumno"));
+    System.out.println(id_alumno);
 
-        DateFormat formatoFecha = new SimpleDateFormat("yyyy-MM-dd");
+    DateFormat formatoFecha = new SimpleDateFormat("yyyy-MM-dd");
 
+    try {
 
-        try {
+      Date fecha_nacimiento = formatoFecha.parse(fecha_texto);
+      Class.forName("com.mysql.cj.jdbc.Driver");
+      Database.connect();
+      Database.jdbi.withExtension(
+          AlumnoDAO.class,
+          dao -> {
+            dao.editAlumno(
+                nombre_alumno, fecha_nacimiento, letra_grupo, dni_tutor_legal, id_alumno);
+            return null;
+          });
 
+      out.println(
+          "<div class='alert alert-success text-center' role='alert'>Alumno editado correctamente</div>");
 
-            Date fecha_nacimiento = formatoFecha.parse(fecha_texto);
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            Database.connect();
-            Database.jdbi.withExtension(AlumnoDAO.class, dao -> {
+    } catch (ParseException | ClassNotFoundException cnfe) {
 
-                dao.editAlumno(nombre_alumno,fecha_nacimiento,letra_grupo, dni_tutor_legal,id_alumno);
-                return null;
-            });
-
-            out.println("<div class='alert alert-success text-center' role='alert'>Alumno editado correctamente</div>");
-
-        } catch (ParseException | ClassNotFoundException cnfe) {
-
-            cnfe.printStackTrace();
-        }
+      cnfe.printStackTrace();
     }
+  }
 }

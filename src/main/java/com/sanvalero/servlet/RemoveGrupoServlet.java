@@ -10,34 +10,33 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-
 @WebServlet("/remove-grupo")
 public class RemoveGrupoServlet extends HttpServlet {
 
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+  @Override
+  protected void doGet(HttpServletRequest request, HttpServletResponse response)
+      throws ServletException, IOException {
 
-        response.setContentType("text/html");
-        PrintWriter out = response.getWriter();
+    response.setContentType("text/html");
+    PrintWriter out = response.getWriter();
 
-        String letra_grupo = request.getParameter("letra_grupo");
+    String letra_grupo = request.getParameter("letra_grupo");
 
+    try {
+      Class.forName("com.mysql.cj.jdbc.Driver");
+      Database.connect();
 
-        try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            Database.connect();
+      Database.jdbi.withExtension(
+          GrupoDAO.class,
+          dao -> {
+            dao.removeGrupo(letra_grupo);
+            return null;
+          });
 
-            Database.jdbi.withExtension(GrupoDAO.class, dao -> {
-                dao.removeGrupo(letra_grupo);
-                return null;
-            });
+      response.sendRedirect("confirm-delete.jsp");
 
-            response.sendRedirect("confirm-delete.jsp");
-
-        } catch (ClassNotFoundException cnfe) {
-            cnfe.printStackTrace();
-        }
+    } catch (ClassNotFoundException cnfe) {
+      cnfe.printStackTrace();
     }
+  }
 }
-
-

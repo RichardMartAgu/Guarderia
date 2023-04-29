@@ -8,16 +8,16 @@ import static com.sanvalero.util.Constants.*;
 
 public class Database {
 
-    public static Jdbi jdbi;
-    public static Handle db;
+  public static Jdbi jdbi;
+  public static Handle db;
 
-    public static void connect() {
-        jdbi = Jdbi.create(DATABASE_URL, DATABASE_USERNAME, DATABASE_PASSWORD);
-        jdbi.installPlugin(new SqlObjectPlugin());
-        db = jdbi.open();
-    }
+  public static void connect() {
+    jdbi = Jdbi.create(DATABASE_URL, DATABASE_USERNAME, DATABASE_PASSWORD);
+    jdbi.installPlugin(new SqlObjectPlugin());
+    db = jdbi.open();
+  }
 
-    public static void close() {
-        db.close();
-    }
+  public static void close() {
+    db.close();
+  }
 }

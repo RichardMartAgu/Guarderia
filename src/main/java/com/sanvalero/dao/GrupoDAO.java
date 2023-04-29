@@ -9,30 +9,32 @@ import java.util.List;
 
 public interface GrupoDAO {
 
-    @SqlQuery("SELECT * FROM Grupo")
-    @UseRowMapper(GrupoMapper.class)
-    List<Grupo> getGrupos();
+  @SqlQuery("SELECT * FROM Grupo")
+  @UseRowMapper(GrupoMapper.class)
+  List<Grupo> getGrupos();
 
-    @SqlQuery("SELECT * FROM grupo GR " +
-            "LEFT JOIN alumno AL ON GR.letra_grupo = AL.letra_grupo " +
-            "WHERE AL.id_alumno IS NULL")
-    @UseRowMapper(GrupoMapper.class)
-    List<Grupo> getGruposSinAlumno();
+  @SqlQuery(
+      "SELECT * FROM grupo GR "
+          + "LEFT JOIN alumno AL ON GR.letra_grupo = AL.letra_grupo "
+          + "WHERE AL.id_alumno IS NULL")
+  @UseRowMapper(GrupoMapper.class)
+  List<Grupo> getGruposSinAlumno();
 
-    @SqlQuery("SELECT * FROM grupo GR " +
-            "LEFT JOIN alumno AL ON GR.letra_grupo = AL.letra_grupo " +
-            "WHERE AL.id_alumno ")
-    @UseRowMapper(GrupoMapper.class)
-    List<Grupo> getGruposConAlumno();
+  @SqlQuery(
+      "SELECT * FROM grupo GR "
+          + "LEFT JOIN alumno AL ON GR.letra_grupo = AL.letra_grupo "
+          + "WHERE AL.id_alumno ")
+  @UseRowMapper(GrupoMapper.class)
+  List<Grupo> getGruposConAlumno();
 
-    @SqlQuery("SELECT * FROM Grupo WHERE LETRA_GRUPO = ?")
-    @UseRowMapper(GrupoMapper.class)
-    Grupo getGrupo(String letra_grupo);
+  @SqlQuery("SELECT * FROM Grupo WHERE LETRA_GRUPO = ?")
+  @UseRowMapper(GrupoMapper.class)
+  Grupo getGrupo(String letra_grupo);
 
-    @SqlUpdate("INSERT INTO Grupo (LETRA_GRUPO, NOMBRE_GRUPO, DNI_PROFESOR,IMAGEN) VALUES (?, ?, ?,?)")
-    void addGrupo(String letra_grupo, String nombre_grupo, String dni_profesor,String imagen);
+  @SqlUpdate(
+      "INSERT INTO Grupo (LETRA_GRUPO, NOMBRE_GRUPO, DNI_PROFESOR,IMAGEN) VALUES (?, ?, ?,?)")
+  void addGrupo(String letra_grupo, String nombre_grupo, String dni_profesor, String imagen);
 
-    @SqlUpdate("DELETE FROM grupo WHERE  LETRA_GRUPO = ?")
-    void removeGrupo(String letra_grupo);
-
+  @SqlUpdate("DELETE FROM grupo WHERE  LETRA_GRUPO = ?")
+  void removeGrupo(String letra_grupo);
 }

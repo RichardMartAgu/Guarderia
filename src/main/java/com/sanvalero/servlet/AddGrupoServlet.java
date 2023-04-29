@@ -21,44 +21,45 @@ import java.util.UUID;
 @WebServlet("/add-grupo")
 @MultipartConfig
 public class AddGrupoServlet extends HttpServlet {
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+  @Override
+  protected void doPost(HttpServletRequest request, HttpServletResponse response)
+      throws ServletException, IOException {
 
+    response.setContentType("text/html");
+    PrintWriter out = response.getWriter();
 
-        response.setContentType("text/html");
-        PrintWriter out = response.getWriter();
+    String letra_grupo = request.getParameter("letra_grupo");
+    String nombre_grupo = request.getParameter("nombre_grupo");
+    String dni_profesor = request.getParameter("dni_profesor");
+    String imagePath = request.getServletContext().getInitParameter("image-path");
 
-        String letra_grupo = request.getParameter("letra_grupo");
-        String nombre_grupo = request.getParameter("nombre_grupo");
-        String dni_profesor = request.getParameter("dni_profesor");
-        String imagePath = request.getServletContext().getInitParameter("image-path");
+    try {
 
-        try {
+      Part imagePart = request.getPart("image");
+      String imagen;
+      if (imagePart.getSize() == 0) {
+        imagen = "no_image.jpg";
+      } else {
+        imagen = UUID.randomUUID() + ".jpg";
+        InputStream fileStream = imagePart.getInputStream();
+        Files.copy(fileStream, Path.of(imagePath + File.separator + imagen));
+      }
 
-            Part imagePart = request.getPart("image");
-            String imagen;
-            if (imagePart.getSize() == 0) {
-                imagen = "no_image.jpg";
-            } else {
-                imagen = UUID.randomUUID() + ".jpg";
-                InputStream fileStream = imagePart.getInputStream();
-                Files.copy(fileStream, Path.of(imagePath + File.separator + imagen));
-            }
+      Class.forName("com.mysql.cj.jdbc.Driver");
+      Database.connect();
+      Database.jdbi.withExtension(
+          GrupoDAO.class,
+          dao -> {
+            dao.addGrupo(letra_grupo, nombre_grupo, dni_profesor, imagen);
+            return null;
+          });
 
+      out.println(
+          "<div class='alert alert-success text-center' role='alert'>Grupo registrado correctamente</div>");
 
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            Database.connect();
-            Database.jdbi.withExtension(GrupoDAO.class, dao -> {
+    } catch (ClassNotFoundException cnfe) {
 
-                dao.addGrupo(letra_grupo,nombre_grupo, dni_profesor,imagen);
-                return null;
-            });
-
-            out.println("<div class='alert alert-success text-center' role='alert'>Grupo registrado correctamente</div>");
-
-        } catch ( ClassNotFoundException cnfe) {
-
-            cnfe.printStackTrace();
-        }
+      cnfe.printStackTrace();
     }
+  }
 }

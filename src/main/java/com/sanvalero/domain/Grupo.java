@@ -9,11 +9,8 @@ import lombok.*;
 @ToString
 public class Grupo {
 
-    private String letra_grupo;
-    @NonNull
-    private String nombre_grupo;
-    @NonNull
-    private String dni_profesor;
-    private String imagen;
-
+  private String letra_grupo;
+  @NonNull private String nombre_grupo;
+  @NonNull private String dni_profesor;
+  private String imagen;
 }
