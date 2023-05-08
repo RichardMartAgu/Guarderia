@@ -4,33 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9db6668a-cb1e-4af4-a681-10639ac779ef" name="Changes" comment="Recuperar proyecto">
+    <list default="true" id="9db6668a-cb1e-4af4-a681-10639ac779ef" name="Changes" comment="Pequeño refactor del proyecto">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/dao/AlumnoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/dao/AlumnoDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/dao/AlumnoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/dao/AlumnoMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/dao/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/dao/Database.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/dao/GrupoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/dao/GrupoDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/dao/GrupoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/dao/GrupoMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/dao/ProfesorDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/dao/ProfesorDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/dao/ProfesorMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/dao/ProfesorMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/dao/TutorLegalDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/dao/TutorLegalDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/dao/TutorLegalMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/dao/TutorLegalMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/domain/Alumno.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/domain/Alumno.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/domain/Grupo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/domain/Grupo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/domain/Profesor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/domain/Profesor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/domain/TutorLegal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/domain/TutorLegal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/AddAlumnoServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/AddAlumnoServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/AddGrupoServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/AddGrupoServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/AddProfesorServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/AddProfesorServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/AddTutorLegalServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/AddTutorLegalServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/EditAlumnoServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/EditAlumnoServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/RemoveAlumnoServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/RemoveAlumnoServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/RemoveGrupoServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/RemoveGrupoServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/RemoveProfesorServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/RemoveProfesorServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/RemoveTutorLegalServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/RemoveTutorLegalServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/SearchAlumnoServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/SearchAlumnoServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/util/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/util/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/util/DateUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/util/DateUtils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,19 +60,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/richa/IdeaProjects/GuarderiaBuena",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/richa/IdeaProjects/GuarderiaBuena&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\richa\IdeaProjects\Guarderia\src\main\webapp" />
@@ -259,7 +234,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682755945753</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Pequeño refactor del proyecto">
+      <created>1682756312077</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1682756312077</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -279,7 +261,8 @@
     <MESSAGE value="Editar y buscar de Alumnos." />
     <MESSAGE value="Refactor" />
     <MESSAGE value="Recuperar proyecto" />
-    <option name="LAST_COMMIT_MESSAGE" value="Recuperar proyecto" />
+    <MESSAGE value="Pequeño refactor del proyecto" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pequeño refactor del proyecto" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
