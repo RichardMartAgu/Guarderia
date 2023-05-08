@@ -12,7 +12,7 @@
           var form = $(this)[0];
         var formData = $("form").serialize();
         $.ajax({
-            url: "search-alumno",
+            url: "search-grupo",
             type: "POST",
             data: formData,
             success: function(data) {
@@ -31,21 +31,21 @@
   <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
     <ol class="breadcrumb">
       <li class="breadcrumb-item"><a href="index.jsp">Inicio</a></li>
-      <li class="breadcrumb-item active" aria-current="page">Buscar Alumnos</li>
+      <li class="breadcrumb-item active" aria-current="page">Buscar Grupos</li>
     </ol>
   </nav>
 </div>
 
 <div class="container px-5">
-    <h3 class="display-4 fw-normal text-center">Buscar Alumno</h3>
+    <h3 class="display-4 fw-normal text-center">Buscar Grupo</h3>
 
     <br/> <br/>
 
-<form class="row g-3 needs-validation" method="post" action="Search-alumno" >
+<form class="row g-3 needs-validation" method="post" action="Search-grupo" >
 
      <div class="col-md-6">
-               <label for="dni" class="form-label">Id Alumno</label>
-               <input type="text" class="form-control" name="id_alumno" >
+               <label for="dni" class="form-label">Nombre Grupo</label>
+               <input type="text" class="form-control" name="nombre_grupo" >
 
            </div>
 
@@ -63,7 +63,7 @@
 
 
         <div id="result"></div>
-            <div class= "text-center bg-danger-subtle text-danger-emphasis fs-4" id="error-message"></div>
+        <div class= "text-center bg-danger-subtle text-danger-emphasis fs-4" id="error-message"></div>
 
 
    </form>

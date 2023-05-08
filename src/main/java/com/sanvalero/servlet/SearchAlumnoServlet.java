@@ -76,11 +76,11 @@ public class SearchAlumnoServlet extends HttpServlet {
         out.println("<td>" + alumno.getDni_tutor_legal() + "</td>");
         out.println("<td>");
         out.println(
-            "<a href=\"./view-detail-alumno.jsp?Id_alumno="
+            "<a href=\"./edit-alumno.jsp?Id_alumno="
                 + alumno.getId_alumno()
                 + "\" class=\"btn btn-primary btn-sm\">Editar</a>");
         out.println(
-            "<a href=\"./edit-alumno.jsp=?Id_alumno="
+            "<a href=\"./list-delete-alumno.jsp?Id_alumno="
                 + alumno.getId_alumno()
                 + "\" class=\"btn btn-danger btn-sm\">Borrar</a>");
         out.println("</td>");

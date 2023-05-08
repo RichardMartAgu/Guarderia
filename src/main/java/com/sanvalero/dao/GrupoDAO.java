@@ -1,5 +1,6 @@
 package com.sanvalero.dao;
 
+import com.sanvalero.domain.Alumno;
 import com.sanvalero.domain.Grupo;
 import org.jdbi.v3.sqlobject.statement.SqlQuery;
 import org.jdbi.v3.sqlobject.statement.SqlUpdate;
@@ -30,6 +31,14 @@ public interface GrupoDAO {
   @SqlQuery("SELECT * FROM Grupo WHERE LETRA_GRUPO = ?")
   @UseRowMapper(GrupoMapper.class)
   Grupo getGrupo(String letra_grupo);
+
+  @SqlQuery("SELECT * FROM Grupo WHERE NOMBRE_GRUPO = ? AND LETRA_GRUPO = ?")
+  @UseRowMapper(GrupoMapper.class)
+  List<Grupo> getSearchGrupoAnd(String nombre_grupo, String letra_grupo);
+
+  @SqlQuery("SELECT * FROM Grupo WHERE NOMBRE_GRUPO = ? OR LETRA_GRUPO = ?")
+  @UseRowMapper(GrupoMapper.class)
+  List<Grupo> getSearchGrupoOr(String nombre_grupo, String letra_grupo);
 
   @SqlUpdate(
       "INSERT INTO Grupo (LETRA_GRUPO, NOMBRE_GRUPO, DNI_PROFESOR,IMAGEN) VALUES (?, ?, ?,?)")

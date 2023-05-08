@@ -5,7 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9db6668a-cb1e-4af4-a681-10639ac779ef" name="Changes" comment="Pequeño refactor del proyecto">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/SearchGrupoServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/search-grupo.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/dao/GrupoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/dao/GrupoDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/AddGrupoServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/AddGrupoServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/SearchAlumnoServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/SearchAlumnoServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/edit-alumno.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/edit-alumno.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/list-delete-grupo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/list-delete-grupo.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/list-delete-tutor-legal.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/list-delete-tutor-legal.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/search-alumno.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/search-alumno.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,19 +70,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/richa/IdeaProjects/GuarderiaBuena&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/richa/OneDrive/Escritorio/TallerWebApp",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\richa\IdeaProjects\Guarderia\src\main\webapp" />
@@ -241,7 +251,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682756312077</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Pequeño refactor del proyecto">
+      <created>1683565782207</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1683565782207</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

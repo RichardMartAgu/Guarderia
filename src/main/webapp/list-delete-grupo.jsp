@@ -76,23 +76,23 @@
 
                <script>
                function confirmarBorrado(event) {
-               event.preventDefault();
-                    swal({
+                   event.preventDefault();
+                        swal({
                             title: "¿Estás seguro?",
-                               text: "¡Una vez borrado, no se puede recuperar!",
-                               icon: "warning",
-                               buttons: true,
-                               dangerMode: true,
-                             })
-                             .then((willDelete) => {
-                               if (willDelete) {
-                               document.getElementById('formulario').submit();
-                               } else {
-                                 swal("El grupo no ha sido borrado");
-                               }
-                             });
-                           }
-                           </script>
+                            text: "¡Una vez borrado, no se puede recuperar!",
+                            icon: "warning",
+                            buttons: true,
+                            dangerMode: true,
+                        })
+                   .then((willDelete) => {
+                       if (willDelete) {
+                       document.getElementById('formulario').submit();
+                       } else {
+                         swal("El grupo no ha sido borrado");
+                       }
+                    });
+               }
+               </script>
 
 
          <%

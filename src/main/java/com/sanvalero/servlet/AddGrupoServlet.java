@@ -38,7 +38,7 @@ public class AddGrupoServlet extends HttpServlet {
       Part imagePart = request.getPart("image");
       String imagen;
       if (imagePart.getSize() == 0) {
-        imagen = "no_image.jpg";
+        imagen = "no_image1.jpg";
       } else {
         imagen = UUID.randomUUID() + ".jpg";
         InputStream fileStream = imagePart.getInputStream();

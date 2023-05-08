@@ -45,7 +45,7 @@
          <h2 class="fw-normal"><%= tutorLegal.getDni_tutor_legal() %></h2>
          <br>
          <p><a class="btn btn-outline-info" href="./view-detail-tutor-legal.jsp?Dni_tutor_legal=<%= tutorLegal.getDni_tutor_legal() %>">Más datos del tutor legal</a></p>
-         <a class="btn btn-outline-danger" href="./remove-alumno?Dni_tutor_legal=<%= tutorLegal.getDni_tutor_legal() %>"onclick="confirmarBorrado(event)">Borrado definitivo del niño al cargo</a></p>
+         <a class="btn btn-outline-warning" href="./remove-alumno?Dni_tutor_legal=<%= tutorLegal.getDni_tutor_legal() %>"onclick="confirmarBorrado(event)">Borrado definitivo del niño al cargo</a></p>
        </div>
 
         <%
@@ -74,7 +74,7 @@
                      <p><a class="btn btn-outline-info" href="./view-detail-tutor-legal.jsp?Dni_tutor_legal=<%= tutorLegal.getDni_tutor_legal() %>">Más datos del tutor legal</a></p>
                      <form id="formulario" action="./remove-tutor-legal" >
                               <input type="hidden" name="Dni_tutor_legal" value="<%= tutorLegal.getDni_tutor_legal() %>">
-                              <a class="btn btn-outline-danger" onclick="confirmarBorrado(event)" href="./remove-tutor-legal?Dni_tutor_legal=<%= tutorLegal.getDni_tutor_legal() %>">Borrado definitivo del profesor</a>
+                              <a class="btn btn-outline-danger" onclick="confirmarBorrado(event)" href="./remove-tutor-legal?Dni_tutor_legal=<%= tutorLegal.getDni_tutor_legal() %>">Borrado definitivo del tutor legal</a>
                      </form>
 
                      <script>
@@ -91,7 +91,7 @@
                                      if (willDelete) {
                                      document.getElementById('formulario').submit();
                                      } else {
-                                       swal("El tutor legal no ha sido borrado");
+                                       swal("El registro no ha sido borrado");
                                      }
                                    });
                                  }

@@ -30,6 +30,7 @@
         <a href="./list-grupo.jsp" class="btn btn-outline-info" role="button" >Listar todos los grupos</a>
         <a href="./add-grupo.jsp" class="btn btn-outline-success" role="button" >Añadir Grupo</a>
         <a href="./list-delete-grupo.jsp" class="btn btn-outline-danger" role="button" >Listado de posible borrado</a>
+        <a href="./search-grupo.jsp" class="btn btn btn-outline-light" role="button" >Buscar Grupo</a>
       </div>
       <div class="bg-body shadow-sm mx-auto" style="width: 700px; border-radius: 21px 21px 0 0;">
          <img src="https://img.freepik.com/vector-gratis/fuente-abc-ninos-felices_1308-5923.jpg?w=2000" alt="Descripción de la imagen" class="img-fluid rounded mx-auto d-block">
@@ -76,6 +77,7 @@
         <a href="./add-alumno.jsp" class="btn btn-outline-success" role="button" >Añadir Alumno</a>
         <a href="./list-delete-alumno.jsp" class="btn btn-outline-danger" role="button" >Listado de posible borrado</a>
         <a href="./search-alumno.jsp" class="btn btn btn-outline-light" role="button" >Buscar Alumno</a>
+
       </div>
       <div class="bg-body shadow-sm mx-auto" style="width: 700px; border-radius: 21px 21px 0 0;">
          <img src="https://img.freepik.com/vector-gratis/conjunto-ninos-preescolares-multietnicos-felices-pie-diferentes-acciones_1150-65467.jpg?w=740&t=st=1681552300~exp=1681552900~hmac=68f5d511b0f3f62d1781e899437a82d9b34c9c89845fa0d3dcc83d8d0b677bbe" alt="Descripción de la imagen" class="img-fluid rounded mx-auto d-block">
