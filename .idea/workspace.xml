@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9db6668a-cb1e-4af4-a681-10639ac779ef" name="Changes" comment="Añadir buscar en grupo">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/SearchTutorLegalServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/search-tutor-legal.jsp" afterDir="false" />
+    <list default="true" id="9db6668a-cb1e-4af4-a681-10639ac779ef" name="Changes" comment="Añadir buscar en tutor legal">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/SearchProfesorServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/search-profesor.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/dao/TutorLegalDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/dao/TutorLegalDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/SearchGrupoServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/SearchGrupoServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/dao/ProfesorDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/dao/ProfesorDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/list-delete-tutor-legal.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/list-delete-tutor-legal.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -261,7 +259,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683570942427</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Añadir buscar en tutor legal">
+      <created>1683732261237</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1683732261238</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -283,7 +288,8 @@
     <MESSAGE value="Recuperar proyecto" />
     <MESSAGE value="Pequeño refactor del proyecto" />
     <MESSAGE value="Añadir buscar en grupo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Añadir buscar en grupo" />
+    <MESSAGE value="Añadir buscar en tutor legal" />
+    <option name="LAST_COMMIT_MESSAGE" value="Añadir buscar en tutor legal" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

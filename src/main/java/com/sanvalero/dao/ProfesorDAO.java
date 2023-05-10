@@ -1,6 +1,7 @@
 package com.sanvalero.dao;
 
 import com.sanvalero.domain.Profesor;
+import com.sanvalero.domain.TutorLegal;
 import org.jdbi.v3.sqlobject.statement.SqlQuery;
 import org.jdbi.v3.sqlobject.statement.SqlUpdate;
 import org.jdbi.v3.sqlobject.statement.UseRowMapper;
@@ -30,6 +31,14 @@ public interface ProfesorDAO {
   @SqlQuery("SELECT * FROM Profesor WHERE Dni_profesor = ?")
   @UseRowMapper(ProfesorMapper.class)
   Profesor getProfesor(String Dni_profesor);
+
+  @SqlQuery("SELECT * FROM Profesor WHERE DNI_PROFESOR = ? AND NOMBRE_PROFESOR = ?")
+  @UseRowMapper(ProfesorMapper.class)
+  List<Profesor> getSearchProfesorAnd(String dni_profesor, String nombre_profesor);
+
+  @SqlQuery("SELECT * FROM Profesor WHERE DNI_PROFESOR = ? OR NOMBRE_PROFESOR = ?")
+  @UseRowMapper(ProfesorMapper.class)
+  List<Profesor> getSearchProfesorOR(String dni_profesor, String nombre_profesor);
 
   @SqlUpdate(
       "INSERT INTO Profesor (DNI_PROFESOR, NOMBRE_PROFESOR, DIRECCION, EMAIL, TELEFONO,IMAGEN) VALUES (?, ?, ?, ?, ?,?)")

@@ -46,6 +46,7 @@
         <a href="./list-profesores.jsp" class="btn btn-outline-info" role="button" >Listar Profesores</a>
         <a href="./add-profesor.jsp"  class="btn btn-outline-success" role="button" >Añadir profesores</a>
         <a href="./list-delete-profesor.jsp" class="btn btn-outline-danger" role="button" >Listado de posible borrado</a>
+        <a href="./search-profesor.jsp" class="btn btn btn-outline-light" role="button" >Buscar Profesor</a>
       </div>
       <div class="bg-body shadow-sm mx-auto" style="width: 700px; border-radius: 21px 21px 0 0;">
          <img src="https://img.freepik.com/vector-gratis/fondo-dia-maestro-dibujado-mano-espanol_23-2149368586.jpg?w=826&t=st=1681551900~exp=1681552500~hmac=f3138936e691ebe7888dba437a27cf8d19b4ce90f78e0a9f566631a37ce87bde" alt="Descripción de la imagen" class="img-fluid rounded mx-auto d-block widg">
