@@ -61,6 +61,7 @@
         <a href="./list-tutor-legal.jsp" class="btn btn-outline-info" role="button" >Listar Tutores Legales</a>
         <a href="./add-tutor-legal.jsp" class="btn btn-outline-success" role="button" >Añadir Tutor Legal</a>
         <a href="./list-delete-tutor-legal.jsp" class="btn btn-outline-danger" role="button" >Listado de posible borrado</a>
+        <a href="./search-tutor-legal.jsp" class="btn btn btn-outline-light" role="button" >Buscar Tutor Legal</a>
       </div>
       <div class="bg-body shadow-sm mx-auto" style="width: 700px; border-radius: 21px 21px 0 0;">
          <img src="https://img.freepik.com/vector-gratis/fondo-dia-padre-dibujado-mano_52683-85125.jpg?w=826&t=st=1681552200~exp=1681552800~hmac=121e65b9a475026a19b7d3f9dca136e0e6db775b82c3b0e909232ef1412635e1" alt="Descripción de la imagen" class="img-fluid rounded mx-auto d-block">

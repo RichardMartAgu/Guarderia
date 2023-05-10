@@ -45,7 +45,7 @@
          <h2 class="fw-normal"><%= tutorLegal.getDni_tutor_legal() %></h2>
          <br>
          <p><a class="btn btn-outline-info" href="./view-detail-tutor-legal.jsp?Dni_tutor_legal=<%= tutorLegal.getDni_tutor_legal() %>">Más datos del tutor legal</a></p>
-         <a class="btn btn-outline-warning" href="./remove-alumno?Dni_tutor_legal=<%= tutorLegal.getDni_tutor_legal() %>"onclick="confirmarBorrado(event)">Borrado definitivo del niño al cargo</a></p>
+         <a class="btn btn-outline-warning" onclick="confirmarBorrado(event)" href="./remove-alumno?Dni_tutor_legal=<%= tutorLegal.getDni_tutor_legal() %>">Borrado definitivo del niño al cargo</a></p>
        </div>
 
         <%
@@ -60,47 +60,47 @@
             for (TutorLegal tutorLegal : tutorLegalListBorradoSi) {
         %>
 
-                   <div class="col-sm-4 text-center" >
+       <div class="col-sm-4 text-center" >
 
-                     <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
-                       <title>Placeholder</title>
-                       <image href="../guarderia_data/<%= tutorLegal.getImagen() %>" width="100%" height="100%" />
-                       <rect width="100%" height="100%" fill="var(--bs-secondary-color)" opacity="0"></rect>
-                      </svg>
+         <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
+           <title>Placeholder</title>
+           <image href="../guarderia_data/<%= tutorLegal.getImagen() %>" width="100%" height="100%" />
+           <rect width="100%" height="100%" fill="var(--bs-secondary-color)" opacity="0"></rect>
+          </svg>
 
-                     <h2 class="fw-normal"><%= tutorLegal.getNombre_tutor_legal() %></h2>
-                     <h2 class="fw-normal"><%= tutorLegal.getDni_tutor_legal() %></h2>
-                     <br>
-                     <p><a class="btn btn-outline-info" href="./view-detail-tutor-legal.jsp?Dni_tutor_legal=<%= tutorLegal.getDni_tutor_legal() %>">Más datos del tutor legal</a></p>
-                     <form id="formulario" action="./remove-tutor-legal" >
-                              <input type="hidden" name="Dni_tutor_legal" value="<%= tutorLegal.getDni_tutor_legal() %>">
-                              <a class="btn btn-outline-danger" onclick="confirmarBorrado(event)" href="./remove-tutor-legal?Dni_tutor_legal=<%= tutorLegal.getDni_tutor_legal() %>">Borrado definitivo del tutor legal</a>
-                     </form>
+         <h2 class="fw-normal"><%= tutorLegal.getNombre_tutor_legal() %></h2>
+         <h2 class="fw-normal"><%= tutorLegal.getDni_tutor_legal() %></h2>
+         <br>
+         <p><a class="btn btn-outline-info" href="./view-detail-tutor-legal.jsp?Dni_tutor_legal=<%= tutorLegal.getDni_tutor_legal() %>">Más datos del tutor legal</a></p>
+         <form id="formulario" action="./remove-tutor-legal" >
+                  <input type="hidden" name="Dni_tutor_legal" value="<%= tutorLegal.getDni_tutor_legal() %>">
+                  <a class="btn btn-outline-danger" onclick="confirmarBorrado(event)" href="./remove-tutor-legal?Dni_tutor_legal=<%= tutorLegal.getDni_tutor_legal() %>">Borrado definitivo del tutor legal</a>
+         </form>
 
-                     <script>
-                     function confirmarBorrado(event) {
-                     event.preventDefault();
-                          swal({
-                                  title: "¿Estás seguro?",
-                                     text: "¡Una vez borrado, no se puede recuperar!",
-                                     icon: "warning",
-                                     buttons: true,
-                                     dangerMode: true,
-                                   })
-                                   .then((willDelete) => {
-                                     if (willDelete) {
-                                     document.getElementById('formulario').submit();
-                                     } else {
-                                       swal("El registro no ha sido borrado");
-                                     }
-                                   });
-                                 }
-                                 </script>
-                   </div>
+         <script>
+         function confirmarBorrado(event) {
+         event.preventDefault();
+          swal({
+              title: "¿Estás seguro?",
+                 text: "¡Una vez borrado, no se puede recuperar!",
+                 icon: "warning",
+                 buttons: true,
+                 dangerMode: true,
+               })
+               .then((willDelete) => {
+                 if (willDelete) {
+                 document.getElementById('formulario').submit();
+                 } else {
+                   swal("El registro no ha sido borrado");
+                 }
+               });
+             }
+         </script>
+       </div>
 
-                    <%
-                        }
-                        %>
+        <%
+            }
+            %>
         </div>
  </main>
 

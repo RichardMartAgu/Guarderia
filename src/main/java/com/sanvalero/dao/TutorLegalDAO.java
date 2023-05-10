@@ -1,5 +1,6 @@
 package com.sanvalero.dao;
 
+import com.sanvalero.domain.Alumno;
 import com.sanvalero.domain.TutorLegal;
 import org.jdbi.v3.sqlobject.statement.SqlQuery;
 import org.jdbi.v3.sqlobject.statement.SqlUpdate;
@@ -30,6 +31,14 @@ public interface TutorLegalDAO {
   @SqlQuery("SELECT * FROM Tutor_legal WHERE DNI_TUTOR_LEGAL = ?")
   @UseRowMapper(TutorLegalMapper.class)
   TutorLegal getTutorLegal(String Dni_tutor_legal);
+
+  @SqlQuery("SELECT * FROM Tutor_legal WHERE DNI_TUTOR_LEGAL = ? AND NOMBRE_TUTOR_LEGAL = ?")
+  @UseRowMapper(TutorLegalMapper.class)
+  List<TutorLegal> getSearchTutorAnd(String dni_tutor_legal, String nombre_tutor_legal);
+
+  @SqlQuery("SELECT * FROM Tutor_legal WHERE DNI_TUTOR_LEGAL = ? OR NOMBRE_TUTOR_LEGAL = ?")
+  @UseRowMapper(TutorLegalMapper.class)
+  List<TutorLegal> getSearchTutorOr(String dni_tutor_legal, String nombre_tutor_legal);
 
   @SqlUpdate(
       "INSERT INTO Tutor_legal (DNI_TUTOR_LEGAL, NOMBRE_TUTOR_LEGAL, DIRECCION, EMAIL, TELEFONO,IMAGEN ) VALUES (?, ?, ?, ?, ?,?)")

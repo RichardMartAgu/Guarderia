@@ -4,18 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9db6668a-cb1e-4af4-a681-10639ac779ef" name="Changes" comment="Pequeño refactor del proyecto">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/SearchGrupoServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/search-grupo.jsp" afterDir="false" />
+    <list default="true" id="9db6668a-cb1e-4af4-a681-10639ac779ef" name="Changes" comment="Añadir buscar en grupo">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/SearchTutorLegalServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/search-tutor-legal.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/dao/GrupoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/dao/GrupoDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/AddGrupoServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/AddGrupoServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/SearchAlumnoServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/SearchAlumnoServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/edit-alumno.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/edit-alumno.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/dao/TutorLegalDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/dao/TutorLegalDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/SearchGrupoServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/SearchGrupoServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/list-delete-grupo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/list-delete-grupo.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/list-delete-tutor-legal.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/list-delete-tutor-legal.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/search-alumno.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/search-alumno.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -258,7 +254,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683565782207</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Añadir buscar en grupo">
+      <created>1683570942427</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1683570942427</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -279,7 +282,8 @@
     <MESSAGE value="Refactor" />
     <MESSAGE value="Recuperar proyecto" />
     <MESSAGE value="Pequeño refactor del proyecto" />
-    <option name="LAST_COMMIT_MESSAGE" value="Pequeño refactor del proyecto" />
+    <MESSAGE value="Añadir buscar en grupo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Añadir buscar en grupo" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
