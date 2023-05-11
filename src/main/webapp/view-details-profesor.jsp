@@ -41,6 +41,7 @@
         <b>Dirección:</b> <p class="card-title text-info-emphasis"> <%= profesor.getDireccion() %> </p>
         <b>Teléfono:</b> <p class="card-title text-info-emphasis"> <%= profesor.getTelefono()  %> </p>
         <b>Email:</b> <p class="card-title text-info-emphasis"> <%= profesor.getEmail()  %> </p>
+        <a class="btn btn-warning"  href="./edit-profesor.jsp?Dni_profesor=<%= profesor.getDni_profesor() %>">Editar Profesor</a>
         <a href="list-delete-profesor.jsp" class="btn btn-danger">Listado eliminar registro</a>
 
       </div>

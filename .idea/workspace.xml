@@ -4,15 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9db6668a-cb1e-4af4-a681-10639ac779ef" name="Changes" comment="Añadir buscar en Profesor">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/EditGrupoServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/edit-grupo.jsp" afterDir="false" />
+    <list default="true" id="9db6668a-cb1e-4af4-a681-10639ac779ef" name="Changes" comment="Añadir editar Grupo">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/EditProfesorServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/edit-profesor.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/dao/GrupoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/dao/GrupoDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/EditAlumnoServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/EditAlumnoServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/dao/ProfesorDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/dao/ProfesorDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/EditGrupoServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/EditGrupoServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/add-grupo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/add-grupo.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/add-profesor.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/add-profesor.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/edit-alumno.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/edit-alumno.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/view-details-grupo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view-details-grupo.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/list-profesores.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/list-profesores.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/view-details-profesor.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view-details-profesor.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -276,7 +278,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683733713277</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Añadir editar Grupo">
+      <created>1683821780767</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1683821780767</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -300,7 +309,8 @@
     <MESSAGE value="Añadir buscar en grupo" />
     <MESSAGE value="Añadir buscar en tutor legal" />
     <MESSAGE value="Añadir buscar en Profesor" />
-    <option name="LAST_COMMIT_MESSAGE" value="Añadir buscar en Profesor" />
+    <MESSAGE value="Añadir editar Grupo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Añadir editar Grupo" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

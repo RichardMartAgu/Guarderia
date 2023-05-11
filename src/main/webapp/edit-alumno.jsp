@@ -33,7 +33,6 @@
   });
 </script>
 
-
 <main>
 
     <div class="d-flex justify-content-center">
@@ -45,11 +44,7 @@
       </nav>
     </div>
 
-
-<%-- Conectar y consultar BD --%>
-
      <%
-
          Class.forName("com.mysql.cj.jdbc.Driver");
          Database.connect();
          List<Grupo> grupoList = Database.jdbi.withExtension(GrupoDAO.class, GrupoDAO::getGrupos);

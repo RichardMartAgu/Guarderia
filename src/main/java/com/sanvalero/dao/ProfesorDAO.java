@@ -57,12 +57,7 @@ public interface ProfesorDAO {
   void removeProfesorLetraGrupo(String letra_grupo);
 
   @SqlUpdate(
-      "UPDATE Profesor SET NOMBRE_PROFESOR = ?, DIRECCION = ?, EMAIL = ?, TELEFONO = ?,IMAGEN = ? WHERE DNI_PROFESOR = ?")
-  void editVehicle(
-      String nombre_profesor,
-      String direccion,
-      String email,
-      int telefono,
-      String imagen,
-      String dni_profesor);
+      "UPDATE Profesor SET NOMBRE_PROFESOR = ?, DIRECCION = ?, EMAIL = ?, TELEFONO = ? WHERE DNI_PROFESOR = ?")
+  void editProfesor(
+      String nombre_profesor, String direccion, String email, int telefono, String dni_profesor);
 }

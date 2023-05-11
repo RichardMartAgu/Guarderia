@@ -154,14 +154,14 @@
                      });
                  });
              </script>
-             </script>
-                    <script type="text/javascript">
-                        function refreshPage() {
-                            setTimeout(function() {
-                                location.reload();
-                            }, 2000);
-                        }
-                    </script>
+     </script>
+        <script type="text/javascript">
+            function refreshPage() {
+                setTimeout(function() {
+                    location.reload();
+                }, 2000);
+            }
+       </script>
 
      </div>
 </form>
