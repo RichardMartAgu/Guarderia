@@ -9,7 +9,6 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.Part;
-
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
@@ -21,43 +20,43 @@ import java.util.UUID;
 @WebServlet("/edit-image-alumno")
 @MultipartConfig
 public class EditAlumnoImageServlet extends HttpServlet {
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+  @Override
+  protected void doPost(HttpServletRequest request, HttpServletResponse response)
+      throws ServletException, IOException {
 
-        response.setContentType("text/html");
-        PrintWriter out = response.getWriter();
+    response.setContentType("text/html");
+    PrintWriter out = response.getWriter();
 
-        int id_alumno = Integer.parseInt(request.getParameter("Id_alumno"));
-        String imagePath = request.getServletContext().getInitParameter("image-path");
+    int id_alumno = Integer.parseInt(request.getParameter("Id_alumno"));
+    String imagePath = request.getServletContext().getInitParameter("image-path");
 
-        try {
+    try {
 
-            Part imagePart = request.getPart("image");
-            String imagen;
-            if (imagePart.getSize() == 0) {
-                imagen = "no_image.jpg";
-            } else {
-                imagen = UUID.randomUUID() + ".jpg";
-                InputStream fileStream = imagePart.getInputStream();
-                Files.copy(fileStream, Path.of(imagePath + File.separator + imagen));
-            }
+      Part imagePart = request.getPart("image");
+      String imagen;
+      if (imagePart.getSize() == 0) {
+        imagen = "no_image.jpg";
+      } else {
+        imagen = UUID.randomUUID() + ".jpg";
+        InputStream fileStream = imagePart.getInputStream();
+        Files.copy(fileStream, Path.of(imagePath + File.separator + imagen));
+      }
 
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            Database.connect();
-            Database.jdbi.withExtension(
-                    AlumnoDAO.class,
-                    dao -> {
-                        dao.addImage(imagen,id_alumno);
-                        return null;
-                    });
+      Class.forName("com.mysql.cj.jdbc.Driver");
+      Database.connect();
+      Database.jdbi.withExtension(
+          AlumnoDAO.class,
+          dao -> {
+            dao.addImage(imagen, id_alumno);
+            return null;
+          });
 
-            out.println(
-                    "<div class='alert alert-success text-center' role='alert'>Alumno registrado correctamente</div>");
+      out.println(
+          "<div class='alert alert-success text-center' role='alert'>Alumno registrado correctamente</div>");
 
-        } catch (ClassNotFoundException cnfe) {
+    } catch (ClassNotFoundException cnfe) {
 
-            cnfe.printStackTrace();
-        }
+      cnfe.printStackTrace();
     }
+  }
 }

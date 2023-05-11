@@ -1,7 +1,6 @@
 package com.sanvalero.dao;
 
 import com.sanvalero.domain.Profesor;
-import com.sanvalero.domain.TutorLegal;
 import org.jdbi.v3.sqlobject.statement.SqlQuery;
 import org.jdbi.v3.sqlobject.statement.SqlUpdate;
 import org.jdbi.v3.sqlobject.statement.UseRowMapper;

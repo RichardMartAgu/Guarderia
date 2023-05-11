@@ -12,34 +12,34 @@ import java.io.PrintWriter;
 
 @WebServlet("/edit-grupo")
 public class EditGrupoServlet extends HttpServlet {
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+  @Override
+  protected void doPost(HttpServletRequest request, HttpServletResponse response)
+      throws ServletException, IOException {
 
-        response.setContentType("text/html");
-        PrintWriter out = response.getWriter();
+    response.setContentType("text/html");
+    PrintWriter out = response.getWriter();
 
-        String letra_grupo = request.getParameter("Letra_grupo");
-        String nombre_grupo = request.getParameter("nombre_grupo");
-        String dni_profesor = request.getParameter("dni_profesor");
+    String letra_grupo = request.getParameter("Letra_grupo");
+    String nombre_grupo = request.getParameter("nombre_grupo");
+    String dni_profesor = request.getParameter("dni_profesor");
 
-        try {
+    try {
 
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            Database.connect();
-            Database.jdbi.withExtension(
-                    GrupoDAO.class,
-                    dao -> {
-                        dao.editGrupo(nombre_grupo,dni_profesor,letra_grupo);
-                        return null;
-                    });
+      Class.forName("com.mysql.cj.jdbc.Driver");
+      Database.connect();
+      Database.jdbi.withExtension(
+          GrupoDAO.class,
+          dao -> {
+            dao.editGrupo(nombre_grupo, dni_profesor, letra_grupo);
+            return null;
+          });
 
-            out.println(
-                    "<div class='alert alert-success text-center' role='alert'>Grupo editado correctamente</div>");
+      out.println(
+          "<div class='alert alert-success text-center' role='alert'>Grupo editado correctamente</div>");
 
-        } catch (ClassNotFoundException cnfe) {
+    } catch (ClassNotFoundException cnfe) {
 
-            cnfe.printStackTrace();
-        }
+      cnfe.printStackTrace();
     }
+  }
 }

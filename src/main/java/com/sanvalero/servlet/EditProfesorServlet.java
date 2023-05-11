@@ -12,43 +12,41 @@ import java.io.PrintWriter;
 
 @WebServlet("/edit-profesor")
 public class EditProfesorServlet extends HttpServlet {
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+  @Override
+  protected void doPost(HttpServletRequest request, HttpServletResponse response)
+      throws ServletException, IOException {
 
-        response.setContentType("text/html");
-        PrintWriter out = response.getWriter();
+    response.setContentType("text/html");
+    PrintWriter out = response.getWriter();
 
-        String dni_profesor = request.getParameter("Dni_profesor");
-        System.out.println(dni_profesor);
-        String nombre_profesor = request.getParameter("nombre_profesor");
-        System.out.println(nombre_profesor);
-        String direccion = request.getParameter("direccion");
-        System.out.println(direccion);
-        String email = request.getParameter("email");
-        System.out.println(email);
-        int telefono = Integer.parseInt(request.getParameter("telefono"));
-        System.out.println(telefono);
+    String dni_profesor = request.getParameter("Dni_profesor");
+    System.out.println(dni_profesor);
+    String nombre_profesor = request.getParameter("nombre_profesor");
+    System.out.println(nombre_profesor);
+    String direccion = request.getParameter("direccion");
+    System.out.println(direccion);
+    String email = request.getParameter("email");
+    System.out.println(email);
+    int telefono = Integer.parseInt(request.getParameter("telefono"));
+    System.out.println(telefono);
 
+    try {
 
+      Class.forName("com.mysql.cj.jdbc.Driver");
+      Database.connect();
+      Database.jdbi.withExtension(
+          ProfesorDAO.class,
+          dao -> {
+            dao.editProfesor(nombre_profesor, direccion, email, telefono, dni_profesor);
+            return null;
+          });
 
-        try {
+      out.println(
+          "<div class='alert alert-success text-center' role='alert'>Profesor editado correctamente</div>");
 
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            Database.connect();
-            Database.jdbi.withExtension(
-                    ProfesorDAO.class,
-                    dao -> {
-                        dao.editProfesor(nombre_profesor,direccion,email,telefono,dni_profesor);
-                        return null;
-                    });
+    } catch (ClassNotFoundException cnfe) {
 
-            out.println(
-                    "<div class='alert alert-success text-center' role='alert'>Profesor editado correctamente</div>");
-
-        } catch (ClassNotFoundException cnfe) {
-
-            cnfe.printStackTrace();
-        }
+      cnfe.printStackTrace();
     }
+  }
 }

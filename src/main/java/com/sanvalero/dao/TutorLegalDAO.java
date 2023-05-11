@@ -1,6 +1,5 @@
 package com.sanvalero.dao;
 
-import com.sanvalero.domain.Alumno;
 import com.sanvalero.domain.TutorLegal;
 import org.jdbi.v3.sqlobject.statement.SqlQuery;
 import org.jdbi.v3.sqlobject.statement.SqlUpdate;
@@ -54,7 +53,11 @@ public interface TutorLegalDAO {
   void removeTutorLegal(String dni_tutor_legal);
 
   @SqlUpdate(
-          "UPDATE Tutor_legal SET NOMBRE_TUTOR_LEGAL = ?, DIRECCION = ?, EMAIL = ?, TELEFONO = ? WHERE DNI_TUTOR_LEGAL = ?")
+      "UPDATE Tutor_legal SET NOMBRE_TUTOR_LEGAL = ?, DIRECCION = ?, EMAIL = ?, TELEFONO = ? WHERE DNI_TUTOR_LEGAL = ?")
   void editTutorLegal(
-          String nombre_tutor_legal, String direccion, String email, int telefono, String dni_tutor_legal);
+      String nombre_tutor_legal,
+      String direccion,
+      String email,
+      int telefono,
+      String dni_tutor_legal);
 }
