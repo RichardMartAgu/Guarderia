@@ -59,4 +59,6 @@ public interface ProfesorDAO {
       "UPDATE Profesor SET NOMBRE_PROFESOR = ?, DIRECCION = ?, EMAIL = ?, TELEFONO = ? WHERE DNI_PROFESOR = ?")
   void editProfesor(
       String nombre_profesor, String direccion, String email, int telefono, String dni_profesor);
+  @SqlUpdate("UPDATE Profesor SET IMAGEN = ? WHERE DNI_PROFESOR = ?")
+  void addImage(String imagenint, String dni_profesor);
 }

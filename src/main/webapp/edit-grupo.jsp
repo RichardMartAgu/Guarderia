@@ -89,7 +89,8 @@ $(document).ready(function() {
                 </div>
 
           <div class="col-12 text-center">
-               <button type="submit" class="btn btn-primary" onclick="refreshPage()" disabled>Registrar</button>
+               <button type="submit" class="btn btn-success" onclick="refreshPage()" disabled>Editar</button>
+               <a class="btn btn-warning"  href="./edit-image-grupo.jsp?Letra_grupo=<%= grupo.getLetra_grupo() %>">Editar Foto</a>
           </div>
 
 

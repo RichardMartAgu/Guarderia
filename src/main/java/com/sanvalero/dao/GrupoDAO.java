@@ -48,4 +48,7 @@ public interface GrupoDAO {
 
   @SqlUpdate("UPDATE Grupo SET NOMBRE_GRUPO = ?, DNI_PROFESOR = ? WHERE LETRA_GRUPO = ?")
   void editGrupo(String nombre_grupo, String dni_profesorString, String letra_grupo);
+
+  @SqlUpdate("UPDATE Grupo SET IMAGEN = ? WHERE LETRA_GRUPO = ?")
+  void addImage(String imagenint, String id_alumno);
 }

@@ -45,16 +45,14 @@
         <%
         for (Alumno alumno : alumnoList) {
             %>
-
                <p class="card-text"><b class="text-decoration-underline">ID y nombre niño del grupo:</b> <%= alumno.getId_alumno() %>  <%= alumno.getNombre_alumno() %></p>
-
             <%
         }
             %>
 
-        <a href="./view-details-profesor.jsp?Dni_profesor=<%= grupo.getDni_profesor() %>" class="btn btn-info">Datos profesor</a>
+        <a href="./view-details-profesor.jsp?Dni_profesor=<%= grupo.getDni_profesor() %>" class="btn btn-info">Datos del profesor al cargo</a>
         <a class="btn btn-warning"  href="./edit-grupo.jsp?Letra_grupo=<%= grupo.getLetra_grupo() %>">Editar Grupo</a>
-        <a href="list-delete-grupo.jsp" class="btn btn-danger">Ir al listado de eliminar registro</a>
+        <a href="list-delete-grupo.jsp" class="btn btn-danger">Listado de eliminar registro</a>
       </div>
     </div>
 </div>

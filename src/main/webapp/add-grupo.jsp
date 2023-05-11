@@ -53,9 +53,6 @@
   </nav>
 </div>
 
-
-<%-- Formulario para añadir Grupo --%>
-
 <div class="container px-5">
     <h3 class="display-4 fw-normal text-center">Añadir Grupo</h3>
     <br/> <br/>

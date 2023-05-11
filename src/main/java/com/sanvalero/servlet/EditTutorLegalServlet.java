@@ -37,7 +37,7 @@ public class EditTutorLegalServlet extends HttpServlet {
           });
 
       out.println(
-          "<div class='alert alert-success text-center' role='alert'>Profesor editado correctamente</div>");
+          "<div class='alert alert-success text-center' role='alert'>Tutor Legal editado correctamente</div>");
 
     } catch (ClassNotFoundException cnfe) {
 

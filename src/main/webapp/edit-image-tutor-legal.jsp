@@ -8,7 +8,7 @@
           var form = $(this)[0];
           var formData = new FormData(form);
           $.ajax({
-              url: "edit-image-alumno",
+              url: "edit-image-tutor-legal",
               type: "POST",
               data: formData,
               processData: false,
@@ -17,7 +17,7 @@
                   $("#result").html(data);
               },
               error: function(jqXHR, textStatus, errorThrown) {
-                  $("#error-message").html("Fallo al registrar! " + errorThrown);
+                  $("#error-message").html("Fallo al editar! " + errorThrown);
               }
           });
       });
@@ -27,24 +27,24 @@
   <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
     <ol class="breadcrumb">
       <li class="breadcrumb-item"><a href="index.jsp">Inicio</a></li>
-      <li class="breadcrumb-item active" aria-current="page">Editar Imagen Alumno</li>
+      <li class="breadcrumb-item active" aria-current="page">Editar Imagen Tutor Legal</li>
     </ol>
   </nav>
 </div>
 <%
-int idAlumno = Integer.parseInt(request.getParameter("Id_alumno"));
+    String DniTutorLegal = request.getParameter("Dni_tutor_legal");
 %>
 <div class="container px-5">
-    <h3 class="display-4 fw-normal text-center">Editar Foto Alumno</h3>
+    <h3 class="display-4 fw-normal text-center">Editar Foto Tutor Legal</h3>
     <br/> <br/>
-<form class="row g-3 needs-validation" method="post" action="edit-image-alumno" enctype="multipart/form-data" novalidate>
+<form class="row g-3 needs-validation" method="post" action="edit-image-grupo" enctype="multipart/form-data" novalidate>
 
 <div class="col-md-6">
                   <label for="image" class="form-label">Añadir imagen para cambio</label>
                   <input type="file" class="form-control" id="image" name="image">
        </div>
        <div>
-               <input type="hidden" class="form-control"  name="Id_alumno" value= "<%= idAlumno %>" >
+               <input type="hidden" class="form-control"  name="Dni_tutor_legal" value= "<%= DniTutorLegal %>" >
           </div>
 
        <div class="col-12 text-center">

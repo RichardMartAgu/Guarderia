@@ -45,18 +45,14 @@
   </nav>
 </div>
 
+ <%
 
-<%-- Conectar y consultar BD --%>
+     Class.forName("com.mysql.cj.jdbc.Driver");
+     Database.connect();
+     List<Grupo> grupoList = Database.jdbi.withExtension(GrupoDAO.class, GrupoDAO::getGrupos);
+     List<TutorLegal> tutorLegalList = Database.jdbi.withExtension(TutorLegalDAO.class, TutorLegalDAO::getTutoresLegalesSinAlumnos);
 
-     <%
-
-         Class.forName("com.mysql.cj.jdbc.Driver");
-         Database.connect();
-         List<Grupo> grupoList = Database.jdbi.withExtension(GrupoDAO.class, GrupoDAO::getGrupos);
-         List<TutorLegal> tutorLegalList = Database.jdbi.withExtension(TutorLegalDAO.class, TutorLegalDAO::getTutoresLegalesSinAlumnos);
-
-     %>
-
+ %>
 
 <div class="container px-5">
     <h3 class="display-4 fw-normal text-center">Añadir Alumno</h3>

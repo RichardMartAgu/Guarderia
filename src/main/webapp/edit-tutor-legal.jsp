@@ -79,7 +79,8 @@
             <input type="hidden" class="form-control"  name="Dni_tutor_legal" value= "<%= tutorLegal.getDni_tutor_legal() %>" >
        </div>
        <div class="col-12 text-center">
-                 <button type="submit" class="btn btn-primary" onclick="refreshPage()" disabled>Editar</button>
+                 <button type="submit" class="btn btn-success" onclick="refreshPage()" disabled>Editar</button>
+                 <a class="btn btn-warning"  href="./edit-image-tutor-legal.jsp?Dni_tutor_legal=<%= tutorLegal.getDni_tutor_legal() %>">Editar Foto</a>
              </div>
 
      <script>

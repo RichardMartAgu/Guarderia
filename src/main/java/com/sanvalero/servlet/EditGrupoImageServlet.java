@@ -1,7 +1,7 @@
 package com.sanvalero.servlet;
 
-import com.sanvalero.dao.AlumnoDAO;
 import com.sanvalero.dao.Database;
+import com.sanvalero.dao.GrupoDAO;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.MultipartConfig;
 import jakarta.servlet.annotation.WebServlet;
@@ -17,9 +17,9 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.UUID;
 
-@WebServlet("/edit-image-alumno")
+@WebServlet("/edit-image-grupo")
 @MultipartConfig
-public class EditAlumnoImageServlet extends HttpServlet {
+public class EditGrupoImageServlet extends HttpServlet {
   @Override
   protected void doPost(HttpServletRequest request, HttpServletResponse response)
       throws ServletException, IOException {
@@ -27,7 +27,7 @@ public class EditAlumnoImageServlet extends HttpServlet {
     response.setContentType("text/html");
     PrintWriter out = response.getWriter();
 
-    int id_alumno = Integer.parseInt(request.getParameter("Id_alumno"));
+    String letra_grupo = request.getParameter("Letra_grupo");
     String imagePath = request.getServletContext().getInitParameter("image-path");
 
     try {
@@ -45,9 +45,9 @@ public class EditAlumnoImageServlet extends HttpServlet {
       Class.forName("com.mysql.cj.jdbc.Driver");
       Database.connect();
       Database.jdbi.withExtension(
-          AlumnoDAO.class,
+          GrupoDAO.class,
           dao -> {
-            dao.addImage(imagen, id_alumno);
+            dao.addImage(imagen, letra_grupo);
             return null;
           });
 

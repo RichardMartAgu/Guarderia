@@ -4,25 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9db6668a-cb1e-4af4-a681-10639ac779ef" name="Changes" comment="Añadir editar imagen alumno">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/dao/AlumnoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/dao/AlumnoDAO.java" afterDir="false" />
+    <list default="true" id="9db6668a-cb1e-4af4-a681-10639ac779ef" name="Changes" comment="Limpieza de coódigo Java">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/EditGrupoImageServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/EditProfesorImageServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/EditTutorImageServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/edit-image-grupo.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/edit-image-profesor.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/edit-image-tutor-legal.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/dao/GrupoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/dao/GrupoDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/dao/ProfesorDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/dao/ProfesorDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/dao/ProfesorMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/dao/ProfesorMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/dao/TutorLegalDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/dao/TutorLegalDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/dao/TutorLegalMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/dao/TutorLegalMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/AddGrupoServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/AddGrupoServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/AddProfesorServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/AddProfesorServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/AddTutorLegalServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/AddTutorLegalServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/EditAlumnoImageServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/EditAlumnoImageServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/EditAlumnoServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/EditAlumnoServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/EditGrupoServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/EditGrupoServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/EditProfesorServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/EditProfesorServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/EditTutorLegalServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/EditTutorLegalServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/RemoveAlumnoServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/RemoveAlumnoServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/SearchGrupoServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/SearchGrupoServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/SearchProfesorServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/SearchProfesorServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/SearchTutorLegalServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/SearchTutorLegalServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/add-alumno.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/add-alumno.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/add-grupo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/add-grupo.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/edit-alumno.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/edit-alumno.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/edit-grupo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/edit-grupo.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/edit-image-alumno.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/edit-image-alumno.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/edit-profesor.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/edit-profesor.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/edit-tutor-legal.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/edit-tutor-legal.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/view-details-grupo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view-details-grupo.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -314,7 +315,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683830986664</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Limpieza de coódigo Java">
+      <created>1683831399101</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1683831399101</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -342,7 +350,8 @@
     <MESSAGE value="Añadir editar Profesor" />
     <MESSAGE value="Añadir editar TutorLegal" />
     <MESSAGE value="Añadir editar imagen alumno" />
-    <option name="LAST_COMMIT_MESSAGE" value="Añadir editar imagen alumno" />
+    <MESSAGE value="Limpieza de coódigo Java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Limpieza de coódigo Java" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -78,7 +78,8 @@
      </div>
 
    <div class="col-12 text-center">
-        <button type="submit" class="btn btn-primary" onclick="refreshPage()"disabled>Editar</button>
+        <button type="submit" class="btn btn-success" onclick="refreshPage()"disabled>Editar</button>
+        <a class="btn btn-warning"  href="./edit-image-profesor.jsp?Dni_profesor=<%= profesor.getDni_profesor() %>">Editar Foto</a>
    </div>
 
     <script>

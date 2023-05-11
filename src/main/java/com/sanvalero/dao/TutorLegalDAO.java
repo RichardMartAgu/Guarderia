@@ -60,4 +60,6 @@ public interface TutorLegalDAO {
       String email,
       int telefono,
       String dni_tutor_legal);
+  @SqlUpdate("UPDATE Tutor_legal SET IMAGEN = ? WHERE DNI_TUTOR_LEGAL = ?")
+  void addImage(String imagenint, String dni_tutor_legal);
 }
