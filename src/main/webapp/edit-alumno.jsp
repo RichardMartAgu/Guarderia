@@ -58,8 +58,6 @@
          Alumno alumno = Database.jdbi.withExtension(AlumnoDAO.class, dao -> dao.getAlumno(idAlumno));
      %>
 
-<%-- Formulario para añadir Alumno --%>
-
 <div class="container px-5">
     <h3 class="display-4 fw-normal text-center">Editar Alumno</h3>
     <br/> <br/>

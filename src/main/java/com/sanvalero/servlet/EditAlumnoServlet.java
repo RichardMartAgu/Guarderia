@@ -3,7 +3,6 @@ package com.sanvalero.servlet;
 import com.sanvalero.dao.Database;
 import com.sanvalero.dao.AlumnoDAO;
 import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.MultipartConfig;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;

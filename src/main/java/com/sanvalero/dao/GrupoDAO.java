@@ -1,11 +1,11 @@
 package com.sanvalero.dao;
 
-import com.sanvalero.domain.Alumno;
 import com.sanvalero.domain.Grupo;
 import org.jdbi.v3.sqlobject.statement.SqlQuery;
 import org.jdbi.v3.sqlobject.statement.SqlUpdate;
 import org.jdbi.v3.sqlobject.statement.UseRowMapper;
 
+import java.util.Date;
 import java.util.List;
 
 public interface GrupoDAO {
@@ -46,4 +46,9 @@ public interface GrupoDAO {
 
   @SqlUpdate("DELETE FROM grupo WHERE  LETRA_GRUPO = ?")
   void removeGrupo(String letra_grupo);
+
+
+  @SqlUpdate("UPDATE Grupo SET NOMBRE_GRUPO = ?, DNI_PROFESOR = ? WHERE LETRA_GRUPO = ?")
+  void editGrupo(
+          String nombre_grupo,String dni_profesorString,String letra_grupo);
 }

@@ -53,6 +53,7 @@
             %>
 
         <a href="./view-details-profesor.jsp?Dni_profesor=<%= grupo.getDni_profesor() %>" class="btn btn-info">Datos profesor</a>
+        <a class="btn btn-warning"  href="./edit-grupo.jsp?Letra_grupo=<%= grupo.getLetra_grupo() %>">Editar Grupo</a>
         <a href="list-delete-grupo.jsp" class="btn btn-danger">Ir al listado de eliminar registro</a>
       </div>
     </div>

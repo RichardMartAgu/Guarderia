@@ -59,7 +59,7 @@
 <div class="container px-5">
     <h3 class="display-4 fw-normal text-center">Añadir Grupo</h3>
     <br/> <br/>
-    <form class="row g-3 needs-validation"method="post" action="add-alumno" enctype="multipart/form-data">
+    <form class="row g-3 needs-validation"method="post" action="add-grupo" enctype="multipart/form-data">
      <div class="col-md-6">
             <label for="nombre" class="form-label">Letra</label>
             <select class="form-control" id="letra_grupo" name="letra_grupo" required>
