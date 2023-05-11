@@ -52,4 +52,9 @@ public interface TutorLegalDAO {
 
   @SqlUpdate("DELETE FROM tutor_legal WHERE DNI_TUTOR_LEGAL = ?")
   void removeTutorLegal(String dni_tutor_legal);
+
+  @SqlUpdate(
+          "UPDATE Tutor_legal SET NOMBRE_TUTOR_LEGAL = ?, DIRECCION = ?, EMAIL = ?, TELEFONO = ? WHERE DNI_TUTOR_LEGAL = ?")
+  void editTutorLegal(
+          String nombre_tutor_legal, String direccion, String email, int telefono, String dni_tutor_legal);
 }

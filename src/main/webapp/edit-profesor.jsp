@@ -26,8 +26,6 @@
   });
 </script>
 
-</script>
-
 <main>
 
 <div class="d-flex justify-content-center">
