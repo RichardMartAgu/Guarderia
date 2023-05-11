@@ -4,13 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9db6668a-cb1e-4af4-a681-10639ac779ef" name="Changes" comment="Añadir editar Profesor">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/EditTutorLegalServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/edit-tutor-legal.jsp" afterDir="false" />
+    <list default="true" id="9db6668a-cb1e-4af4-a681-10639ac779ef" name="Changes" comment="Añadir editar TutorLegal">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/edit-image-alumno.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/dao/TutorLegalDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/dao/TutorLegalDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/edit-profesor.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/edit-profesor.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/view-detail-tutor-legal.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view-detail-tutor-legal.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/dao/AlumnoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/dao/AlumnoDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/EditAlumnoServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/EditAlumnoServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/EditImageServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/servlet/EditAlumnoImageServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/add-alumno.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/add-alumno.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/edit-alumno.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/edit-alumno.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/edit-grupo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/edit-grupo.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -288,7 +290,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683826812612</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Añadir editar TutorLegal">
+      <created>1683828603211</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1683828603211</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -314,7 +323,8 @@
     <MESSAGE value="Añadir buscar en Profesor" />
     <MESSAGE value="Añadir editar Grupo" />
     <MESSAGE value="Añadir editar Profesor" />
-    <option name="LAST_COMMIT_MESSAGE" value="Añadir editar Profesor" />
+    <MESSAGE value="Añadir editar TutorLegal" />
+    <option name="LAST_COMMIT_MESSAGE" value="Añadir editar TutorLegal" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

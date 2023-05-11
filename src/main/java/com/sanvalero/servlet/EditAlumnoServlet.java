@@ -28,7 +28,7 @@ public class EditAlumnoServlet extends HttpServlet {
     String fecha_texto = request.getParameter("fecha_nacimiento");
     String letra_grupo = request.getParameter("letra_grupo");
     int id_alumno = Integer.parseInt(request.getParameter("Id_alumno"));
-    System.out.println(id_alumno);
+
 
     DateFormat formatoFecha = new SimpleDateFormat("yyyy-MM-dd");
 

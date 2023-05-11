@@ -57,7 +57,6 @@
 
      %>
 
-<%-- Formulario para añadir Alumno --%>
 
 <div class="container px-5">
     <h3 class="display-4 fw-normal text-center">Añadir Alumno</h3>

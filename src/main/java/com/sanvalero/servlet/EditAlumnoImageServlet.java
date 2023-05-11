@@ -1,3 +1,5 @@
+package com.sanvalero.servlet;
+
 import com.sanvalero.dao.AlumnoDAO;
 import com.sanvalero.dao.Database;
 import jakarta.servlet.ServletException;
@@ -14,15 +16,11 @@ import java.io.InputStream;
 import java.io.PrintWriter;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.UUID;
 
-@WebServlet("/add-alumno")
+@WebServlet("/edit-image-alumno")
 @MultipartConfig
-public class AddAlumnoServlet extends HttpServlet {
+public class EditAlumnoImageServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -30,13 +28,8 @@ public class AddAlumnoServlet extends HttpServlet {
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
 
-        String dni_tutor_legal = request.getParameter("dni_tutor_legal");
-        String nombre_alumno = request.getParameter("nombre_alumno");
-        String fecha_texto = request.getParameter("fecha_nacimiento");
-        String letra_grupo = request.getParameter("letra_grupo");
+        int id_alumno = Integer.parseInt(request.getParameter("Id_alumno"));
         String imagePath = request.getServletContext().getInitParameter("image-path");
-
-        DateFormat formatoFecha = new SimpleDateFormat("dd/MM/yyyy");
 
         try {
 
@@ -50,20 +43,19 @@ public class AddAlumnoServlet extends HttpServlet {
                 Files.copy(fileStream, Path.of(imagePath + File.separator + imagen));
             }
 
-            Date fecha_nacimiento = formatoFecha.parse(fecha_texto);
             Class.forName("com.mysql.cj.jdbc.Driver");
             Database.connect();
             Database.jdbi.withExtension(
                     AlumnoDAO.class,
                     dao -> {
-                        dao.addAlumno(nombre_alumno, fecha_nacimiento, letra_grupo, dni_tutor_legal, imagen);
+                        dao.addImage(imagen,id_alumno);
                         return null;
                     });
 
             out.println(
                     "<div class='alert alert-success text-center' role='alert'>Alumno registrado correctamente</div>");
 
-        } catch (ParseException | ClassNotFoundException cnfe) {
+        } catch (ClassNotFoundException cnfe) {
 
             cnfe.printStackTrace();
         }

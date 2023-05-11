@@ -130,7 +130,13 @@ $(document).ready(function() {
                });
           </script>
      </div>
-
+     <script type="text/javascript">
+              function refreshPage() {
+                  setTimeout(function() {
+                      location.reload();
+                  }, 2000);
+              }
+      </script>
    </div>
 </form>
 <div id="result"></div>

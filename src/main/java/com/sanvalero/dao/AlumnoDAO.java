@@ -52,4 +52,9 @@ public interface AlumnoDAO {
       String letra_grupo,
       String dni_tutor_legal,
       int id_alumno);
+  @SqlUpdate(
+          "UPDATE Alumno SET IMAGEN = ? WHERE ID_ALUMNO = ?")
+  void addImage(
+          String imagenint,int id_alumno);
 }
+

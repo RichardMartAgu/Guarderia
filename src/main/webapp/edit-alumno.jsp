@@ -116,6 +116,7 @@
 
    <div class="col-12 text-center">
         <button type="submit" class="btn btn-primary" onclick="ejecutarAmbasAcciones()" disabled>Editar</button>
+        <a class="btn btn-warning"  href="./edit-image-alumno.jsp?Id_alumno=<%= alumno.getId_alumno() %>">Editar Foto</a>
    </div>
 
     <script>
